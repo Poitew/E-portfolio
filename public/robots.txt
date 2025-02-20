@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /google59a3ffebf31107c2.html
+Sitemap: https://sickpoitew.netlify.app/sitemap.xml

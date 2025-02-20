@@ -1,0 +1,31 @@
+[
+    {
+        "src": "/assets/tech/react.svg",
+        "alt": "React.JS Framework",
+        "content": "React.JS"
+    },
+
+    {
+        "src": "/assets/tech/php.svg",
+        "alt": "PHP BackEnd Language",
+        "content": "PHP"
+    },
+
+    {
+        "src": "/assets/tech/docker-icon.svg",
+        "alt": "Docker Technology",
+        "content": "Docker"
+    },
+    
+    {
+        "src": "/assets/tech/jenkins.svg",
+        "alt": "Jenkins CI/CD",
+        "content": "Jenkins"
+    },
+
+    {
+        "src": "/assets/tech/git-icon.svg",
+        "alt": "Git Version Control System",
+        "content": "Git"
+    }
+]

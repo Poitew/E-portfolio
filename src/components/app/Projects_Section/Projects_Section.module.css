@@ -1,0 +1,131 @@
+@keyframes borderRotate {
+    0% {
+      border-image-source: radial-gradient(circle, #1e304e, #2e4a6a, #4a6e8f, #8aacc9);
+    }
+    25% {
+      border-image-source: radial-gradient(circle, #2e4a6a, #4a6e8f, #8aacc9, #1e304e);
+    }
+    50% {
+      border-image-source: radial-gradient(circle, #4a6e8f, #8aacc9, #1e304e, #2e4a6a);
+    }
+    75% {
+      border-image-source: radial-gradient(circle, #8aacc9, #1e304e, #2e4a6a, #4a6e8f);
+    }
+    100% {
+      border-image-source: radial-gradient(circle, #1e304e, #2e4a6a, #4a6e8f, #8aacc9);
+    }
+}
+
+.section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+}
+
+.project {
+    min-height: 70vh;
+    padding: 5% 0 0 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 5vw;
+    background-size: cover;
+    background-position: center;
+    border-top: 3px solid rgb(179, 175, 175);
+    border-bottom: 3px solid rgb(179, 175, 175);
+    position: relative;
+    border-image-slice: 1;
+    animation: borderRotate 5s infinite linear;
+}
+
+.project::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.info, .link {
+    position: relative;
+    z-index: 2;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 3vw;
+}
+
+.description {
+    width: 65%;
+    line-height: 3;
+}
+
+.list {
+    padding: 0;
+    display: flex;
+    gap: 2vw;
+    list-style: none;
+}
+
+.link {
+    width: 3vw;
+}
+
+/* X-Small devices (portrait phones, less than 600px) */
+@media only screen and (max-width: 600px) {
+    .project {
+        padding-left: 0;
+        align-items: center;
+    }
+
+    .info {
+        align-items: center;
+    }
+
+    .title {
+        font-size: 15vw;
+    }
+
+    .description {
+        width: 90%;
+        font-size: 4.25vw;
+        line-height: 2.75;
+    }
+
+    .list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .link {
+        width: 10vw;
+    }
+}
+
+/* Medium devices (tablets, less than 1025) */
+@media only screen and (min-width: 700px) and (max-width: 1024px) and (min-height: 700px){
+    .title {
+        font-size: 10vw;
+    }
+
+    .description {
+        width: 90%;
+        line-height: 3;
+        font-size: 3vw;
+    }
+
+    .list {
+        font-size: 3.5vw;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .link {
+        width: 6vw;
+    }
+}

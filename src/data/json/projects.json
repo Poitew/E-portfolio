@@ -1,0 +1,55 @@
+[
+    {
+        "name":"CineCritics",
+        "description":"Full stack CRUD project leveraging React, PHP + JWT and MySQL. CineCritics is an interactive website made for TV shows lovers where you can search, find and review your favourite TV shows. If you change your mind you can always delete or rewrite your review without any worries.",
+        "tech": [
+            "CSS Modules",
+            "React",
+            "React Router",
+            "PHP",
+            "JWT",
+            "MySQL",
+            "API"
+        ],
+        "github":"https://github.com/Poitew/CineCritics",
+        "src":"/assets/projects-img/cinema.webp"
+    },
+
+    {
+        "name":"Books Finder",
+        "description":"A full-stack project that uses VueJS as the frontend framework and PHP with MySQL for the backend. Books Finder helps you find your next read by suggesting a random book and giving you a brief overview of it. It also includes a search functionality that delivers all the information you need about any searched book.",
+        "tech": [
+            "VueJS",
+            "PHP",
+            "MySQL",
+            "API"
+        ],
+        "github":"https://github.com/Poitew/Book-Realm",
+        "src":"/assets/projects-img/books.webp"
+    },
+
+    {
+        "name":"To-Do-Son",
+        "description":"To-Do app written in Python that transcribes all your tasks in JSON format. It uses the JSON library for cleaner and overall better code; the terminal is customized using the art library. The project is provided with a Jenkins + Groovy pipeline to automate the building, testing, and Docker image-building phases of the project.",
+        "tech": [
+            "Python",
+            "Jenkins - Groovy",
+            "Docker"
+        ],
+        "github":"https://github.com/Poitew/To-Do-Son",
+        "src":"/assets/projects-img/space.webp"
+    },
+
+    {
+        "name":"E-Portfolio",
+        "description":"A personal e-portfolio to share who I am, my interests, my skills, projects I have built over the years, and opinions/tutorials on random tech topics. Built with CSS Modules, TypeScript, ReactJS, and React Router; completely responsive.",
+        "tech": [
+            "CSS Modules",
+            "TypeScript",
+            "ReactJS",
+            "React Router"
+        ],
+        "github":"https://github.com/Poitew/E-Portfolio",
+        "src":"/assets/projects-img/shooting-stars.webp"
+    }
+]

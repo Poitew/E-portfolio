@@ -1,0 +1,76 @@
+{
+    "SoftwareDev":[
+        {
+            "src":"/assets/tech/html-5-svgrepo-com.svg",
+            "alt":"HTML5"
+        },
+
+        {
+            "src":"/assets/tech/css-3-svgrepo-com.svg",
+            "alt":"CSS3"
+        },
+
+        {
+            "src":"/assets/tech/javascript.svg",
+            "alt":"JavaScript"
+        },
+
+        {
+            "src":"/assets/tech/typescript-icon.svg",
+            "alt":"TypeScript"
+        },
+
+        {
+            "src":"/assets/tech/react.svg",
+            "alt":"React.JS"
+        },
+
+        {
+            "src":"/assets/tech/vue.svg",
+            "alt":"Vue.JS"
+        },
+
+        {
+            "src":"/assets/tech/php.svg",
+            "alt":"PHP"
+        },
+
+        {
+            "src":"/assets/tech/mysql-icon.svg",
+            "alt":"MySql"
+        },
+
+        {
+            "src":"/assets/tech/c-plusplus.svg",
+            "alt":"C++"
+        }
+    ],
+
+    "DevOps":[
+        {
+            "src":"/assets/tech/bash-icon.svg",
+            "alt":"Bash"
+        },
+
+        {
+            "src":"/assets/tech/python.svg",
+            "alt":"Python3"
+        },
+
+        {
+            "src":"/assets/tech/git-icon.svg",
+            "alt":"Git"
+        },
+
+        {
+            "src":"/assets/tech/docker-icon.svg",
+            "alt":"Docker"
+        },
+
+        {
+            "src":"/assets/tech/jenkins.svg",
+            "alt":"Jenkins"
+        }
+
+    ]
+}

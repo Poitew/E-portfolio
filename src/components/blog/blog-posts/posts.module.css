@@ -1,0 +1,57 @@
+.posts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10vh;
+    padding-right: 20%;
+}
+
+.post {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    gap: 0 0.5vw;
+}
+
+.topic {
+    grid-area: 2 / 2 / 2 / 2;
+}
+
+/* X-Small devices (portrait phones, less than 600px) */
+@media only screen and (max-width: 600px) {
+    .posts {
+        padding-right: 0;
+        gap: 7.5vh;
+    }
+
+    .post {
+        width: 70vw;
+    }
+
+    .date {
+        font-size: 4vw;
+    }
+
+    .title, .topic {
+        font-size: 4.5vw;
+    }
+}
+
+/* Medium devices (tablets, less than 1025) */
+@media only screen and (min-width: 700px) and (max-width: 1024px) and (min-height: 700px){
+    .posts {
+        padding-right: 0;
+    }
+
+    .post {
+        width: 45vw;
+    }
+
+    .date {
+        font-size: 3vw;
+    }
+
+    .title, .topic {
+        font-size: 3.5vw;
+    }
+}
