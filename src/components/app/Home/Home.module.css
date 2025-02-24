@@ -112,15 +112,14 @@
 }
 
 .glow {
-    --color: rgba(132, 171, 23, 0.5);
     width: 20vw; 
     height: 20vw;
     margin-left: 65%;
     margin-top: -10%;
     border-radius: 50%;
-    background-color: var(--color); 
-    box-shadow: 0 0 50px var(--color),
-                inset 0 0 50px var(--color); 
+    background-color: var(--green); 
+    box-shadow: 0 0 50px var(--green),
+                inset 0 0 50px var(--green); 
     filter: blur(60px);
     position: absolute;
     animation: 5s glow infinite ease-in-out;

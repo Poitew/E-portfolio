@@ -1,14 +1,22 @@
+.main {
+    display: flex;
+    justify-content: center;
+}
+
 .posts {
+    width: 60%;
+    min-height: 50vh;
+    padding: 2% 0 0 1%;
+    border-radius: 0.5vw;
+    background-color: #0f1c31;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 10vh;
-    padding-right: 20%;
+    gap: 5vh;
 }
 
 .post {
-    display: grid;
-    grid-template-columns: 50% 50%;
+    width: fit-content;
+    display: flex;
     align-items: center;
     gap: 0 0.5vw;
 }

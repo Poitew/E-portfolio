@@ -6,16 +6,18 @@ function Posts(){
     const posts: any[] = posts_json;
 
     return(
-        <main className={styles.posts} >
-            {posts.map((element, index) => (
-                <Blog_Card
-                    title={element.title}
-                    date={element.date}
-                    topic={element.topic}
-                    to={element.to}
-                    key={index}
-                />
-            ))}
+        <main className={styles.main}>
+            <section className={styles.posts} >
+                {posts.map((element, index) => (
+                    <Blog_Card
+                        title={element.title}
+                        date={element.date}
+                        topic={element.topic}
+                        to={element.to}
+                        key={index}
+                    />
+                ))}
+            </section>
         </main>
     );
 }
@@ -30,9 +32,9 @@ interface BlogCardProps {
 function Blog_Card(props: BlogCardProps){
     return(
         <Link className={styles.post} to={props.to} >
-            <p className={styles.date} >{props.date}</p>
             <h2 className={styles.title} >{props.title}</h2>
             <p className={styles.topic} >- {props.topic}</p>
+            <p className={styles.date} >{props.date}</p>
         </Link>
     );
 }

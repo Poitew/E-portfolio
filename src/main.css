@@ -1,6 +1,7 @@
 /* general decoration*/
 :root {
-    --title_size: 5vw
+    --title_size: 5vw;
+    --green: rgba(23, 171, 74, 0.5);
 } 
 
 body {
@@ -9,6 +10,10 @@ body {
     margin: 0;
     color: rgb(240, 222, 222);
     cursor: url(/assets/icons/cursor.png), auto;
+    min-height: 100vh;
+}
+
+#root {
     min-height: 100vh;
 }
 
@@ -42,6 +47,7 @@ p {
 }
 
 a {
+    font-size: calc(0.1rem + 1vw);
     color: inherit;
     text-decoration-line: none;
 }
@@ -49,6 +55,10 @@ a {
 ul {
     margin: 0;
     padding: 0;
+}
+
+li {
+    font-size: calc(0.1rem + 1vw);
 }
 
 ::-webkit-scrollbar {

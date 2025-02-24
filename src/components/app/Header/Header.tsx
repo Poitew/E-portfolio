@@ -5,20 +5,23 @@ import styles from './Header.module.css'
 
 function HeaderFunc(){
 
-    const [cont, setCont] = useState(0);
+    const [open_menu, set_open_menu] = useState<boolean>(false);
+
     const ham_btn = useRef<HTMLButtonElement | null>(null);
     const header = useRef<HTMLElement | null>(null);
     const headerImage = useRef<HTMLImageElement | null>(null);
     const homeP = useRef<HTMLParagraphElement | null>(null);
     const aboutMeP = useRef<HTMLParagraphElement | null>(null);
     const projectsP = useRef<HTMLParagraphElement | null>(null);
+
     const width: number = window.innerWidth;
-    const color: string = "#0ea5e9";
+    const color: string = "#0ea5e9"; // Color for the header links
 
     useEffect(() => {
         if (homeP.current) homeP.current.style.color = color;
         if (aboutMeP.current) aboutMeP.current.style.color = "white";
         if (projectsP.current) projectsP.current.style.color = "white";
+
         const handleScroll = () => {
             const websitePosition = window.scrollY;
             // Changes the logo size
@@ -37,7 +40,7 @@ function HeaderFunc(){
                     homeP.current.style.color = color;
                     aboutMeP.current.style.color = "white";
                     projectsP.current.style.color = "white";
-                } else if (websitePosition <= 1200) {
+                } else if (websitePosition <= 1500) {
                     homeP.current.style.color = "white";
                     aboutMeP.current.style.color = color;
                     projectsP.current.style.color = "white";
@@ -56,14 +59,14 @@ function HeaderFunc(){
 
     function handleMenu() {
         if(header.current){
-            if(cont % 2 == 0) {
+            if(open_menu) {
                 header.current.style.transform = "translateY(0)";
                 header.current.style.transition = "all 0.5s ease-in-out";
             }
             else {
                 header.current.style.transform = "translateY(-200%)";
             }
-            setCont(cont + 1);
+            set_open_menu(!open_menu);
         }
     }
 
@@ -74,22 +77,22 @@ function HeaderFunc(){
                 <>
                     <header ref={header} className={styles.header} >
                         <div className={styles.logo}>
-                            <a href="#about-me-ID" className={styles.link}>
+                            <Link to="#about-me-ID" className={styles.link}>
                                 <img className={styles.img} src="/assets/icons/logo.webp" alt="Code Logo" ref={headerImage} />
                                 SICKPOITEW
-                            </a>
+                            </Link>
                         </div>
                 
                         <div ref={homeP} className={styles.div}>
-                            <a href="#home">HOME</a>
+                            <Link to="#home">HOME</Link>
                         </div>
                 
                         <div ref={aboutMeP} className={styles.div}>
-                            <a href="#about-me-ID">ABOUT ME</a>
+                            <Link to="#about-me-ID">ABOUT ME</Link>
                         </div>
                 
                         <div ref={projectsP} className={styles.div}>
-                            <a href="#projects-section">PROJECTS</a>
+                            <Link to="#projects-section">PROJECTS</Link>
                         </div>
                         
                         <ScrollIndicator/>
@@ -129,7 +132,7 @@ function ScrollIndicator(){
             right: 0,
             height: 5,
             originX: 0,
-            backgroundColor: "#fc9803",
+            backgroundColor: "var(--green)",
         }}
         />
     );
