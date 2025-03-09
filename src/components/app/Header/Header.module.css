@@ -23,7 +23,7 @@
 }
 
 .link {
-    font-size: 2em;
+    font-size: 1.25em;
     display: flex;
     align-items: center;
 }
@@ -37,6 +37,7 @@
     width: 10vw;
     height: 5vh;
     letter-spacing: 2px;
+    font-size: 0.8em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -148,5 +149,6 @@
 
     .div {
         width: 25vw;
+        font-size: 1.5em;
     }
 }

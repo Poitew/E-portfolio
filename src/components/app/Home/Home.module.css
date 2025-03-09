@@ -52,7 +52,7 @@
 }
 
 .description {
-    font-size: 1.4em;
+    font-size: 1.1em;
     width: 80%;
     color: rgb(148 163 184);
 }
@@ -159,6 +159,9 @@
 
 /* Medium devices (tablets, less than 1025) */
 @media only screen and (min-width: 700px) and (max-width: 1024px) and (min-height: 700px){
+    .home {
+        padding: 20% 10% 0 5%;
+    }
     .presentationContainer {
         margin-top: 15%;
     }
