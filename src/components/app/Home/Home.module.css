@@ -1,11 +1,11 @@
 .home {
-    height: 110vh;
+    min-height: 110vh;
     background-color: #120b1d;
     padding: 10% 10% 0 8%;
 }
 
 .presentation {
-    word-spacing: 0.5vw;
+    word-spacing: 0.1em;
     color: white;
     letter-spacing: -0.025em;
 }
@@ -17,7 +17,7 @@
 
 .cursor {
     width: 2px;
-    height: calc(var(--title_size) + 1vw);
+    height: calc(var(--title_size) / 3);
     background-color: white;
     display: inline-block;
     margin-left: 2.5%;
@@ -31,7 +31,7 @@
     width: fit-content;
     display: flex;
     flex-wrap: wrap;
-    gap: 0 3vw;
+    gap: 0 5vw;
     padding: 0;
     margin: 2% 0;
 }
@@ -52,7 +52,7 @@
 }
 
 .description {
-    font-size: 1.4vw;
+    font-size: 1.4em;
     width: 80%;
     color: rgb(148 163 184);
 }
@@ -78,6 +78,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 1em;
 }
 
 .btn:hover {
@@ -131,8 +132,8 @@
         padding: 20% 3% 0 3%;
     }
 
-    .presentation {
-        font-size: 9vw;
+    .typewriter {
+        display: contents;
     }
 
     .cursor {
@@ -145,13 +146,8 @@
 
     .description {
         width: 100%;
-        font-size: 5vw;
         margin-top: 10%;
         line-height: 5vh;
-    }
-
-    .span {
-        font-size: 12vw;
     }
 
     .btn {
@@ -168,7 +164,7 @@
     }
 
     .presentation {
-        font-size: 8vw;
+        font-size: 4em;
     }
 
     .list {
@@ -176,17 +172,14 @@
     }
 
     .description {
-        font-size: 4vw;
         width: 100%;
         margin-top: 5%;
+        line-height: 4vh;
+        font-size: 1.75em;
     }
 
     .btn {
         width: 20vw;
         margin-top: 10%;
-    }
-
-    .btnContent {
-        font-size: 2.5vw;
     }
 }

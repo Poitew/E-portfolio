@@ -38,7 +38,7 @@ function Home() {
         <main className={styles.home} id="home">
             <h1 className={styles.presentation}>
                 <span className={styles.span}>Sickpoitew</span>, aspiring <br />
-                <motion.span className={styles.typewriter} >{text}<Cursor /></motion.span>
+                <span className={styles.typewriter} >{text}<Cursor /></span>
             </h1>
 
             <div className={styles.glow}></div>

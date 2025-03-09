@@ -37,24 +37,16 @@
     .icon {
         width: 7vw;
     }
-
-    .thanks {
-        font-size: 3.5vw;
-    }
 }
 
 /* Medium devices (tablets, less than 1025) */
 @media only screen and (min-width: 700px) and (max-width: 1024px) and (min-height: 700px){
     .sitemap {
         width: 60%;
-        font-size: 4vw;
+        font-size: 1.25em;
     }
 
     .icon {
         width: 7vw;
-    }
-
-    .thanks {
-        font-size: 3.5vw;
     }
 }

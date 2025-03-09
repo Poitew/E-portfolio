@@ -1,5 +1,7 @@
 .staticLink {
     color: #0fb7d5;
+    background-color: #0c0719;
+    padding: 0.25% 4%;
     position: fixed;
 }
 
@@ -25,12 +27,13 @@
 }
 
 .h2 {
-    font-size: 2.5vw;
+    font-size: 2em;
     margin: 5% 0 1% 0;
 }
 
 .h3 {
-    font-size: 1.5vw;
+    font-size: 1.5em;
+    margin: 5% 0 1% 0;
 }
 
 .p {
@@ -38,11 +41,26 @@
     margin-left: 3%;
 }
 
-.code {
-    background-color: #1b1a1a;
-    padding: 0.25% 0.75%;
-    border: 2px solid black;
-    border-radius: 0.2vw;
+.pre::-webkit-scrollbar {
+    background-color: #DED7E6;
+    height: 10px;
+}
+
+.pre::-webkit-scrollbar-thumb {
+    background: #9684A3;
+    border-top-right-radius: 10px;
+}
+
+.pre {
+    background: #eee;
+    border-left: 10px solid #9684A3;
+    border-radius: 10px;
+    padding: 10px;
+    letter-spacing: .5px;
+    font-size: 10pt;
+    color: #000;
+    margin-left: 3%;
+    overflow: auto;
 }
 
 /* X-Small devices (portrait phones, less than 600px) */
@@ -52,54 +70,29 @@
         margin-top: 7.5%;
     }
 
-    .h1 {
-        font-size: 10vw;
-    }
-
-    .h2 {
-        font-size: 5vw;
-    }
-
-    .h3 {
-        font-size: 4vw;
-    }
-
     .p {
-        font-size: 4vw;
         margin: 0 0 10% 3%;
+    }
+
+    .staticLink {
+        color: #0fb7d5;
+        padding: 2% 5%;
     }
 }
 
 /* Medium devices (tablets, less than 1025) */
 @media only screen and (min-width: 700px) and (max-width: 1024px) and (min-height: 700px){
-    .staticLink {
-        font-size: 3.5vw;
-    }
-    
     .content {
         width: 90%;
         margin-top: 5%;
     }
 
-    .h1 {
-        font-size: 10vw;
+    .p {
+        font-size: 1.25em;
+        line-height: 4vh;
     }
 
     .h2 {
-        font-size: 5vw;
-    }
-
-    .h3 {
-        font-size: 4vw;
-    }
-
-    .p {
-        font-size: 3.5vw;
-        margin: 0 0 10% 3%;
-        line-height: 5vh;
-    }
-
-    .link {
-        font-size: 5vw;
+        margin-top: 10%;
     }
 }

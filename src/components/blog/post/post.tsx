@@ -32,6 +32,7 @@ function Post() {
                         h2: ({ node, ...props }) => <h2 className={styles.h2} {...props} />,
                         h3: ({ node, ...props}) => <h3 className={styles.h3} {...props} />,
                         p: ({ node, ...props }) => <p className={styles.p} {...props} />,
+                        pre: ({ node, ...props}) => <pre className={styles.pre} {...props} />,
                         code: ({ node, ...props }) => <code className={styles.code} {...props} />
                     }}
                 >{content}</ReactMarkdown>

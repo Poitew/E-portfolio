@@ -1,12 +1,24 @@
+.titleContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5%;
+}
+
+.link {
+    font-size: 1.1em;
+    color: #0fb7d5;
+}
+
 .main {
     display: flex;
     justify-content: center;
 }
 
 .posts {
-    width: 60%;
+    min-width: 60%;
     min-height: 50vh;
-    padding: 2% 0 0 1%;
+    padding: 2%;
     border-radius: 0.5vw;
     background-color: #0f1c31;
     display: flex;
@@ -28,38 +40,19 @@
 /* X-Small devices (portrait phones, less than 600px) */
 @media only screen and (max-width: 600px) {
     .posts {
-        padding-right: 0;
         gap: 7.5vh;
     }
 
     .post {
-        width: 70vw;
+        gap: 0 1.5vw;
     }
 
-    .date {
-        font-size: 4vw;
-    }
-
-    .title, .topic {
-        font-size: 4.5vw;
+    .titleContainer {
+        margin-bottom: 15%;
     }
 }
 
 /* Medium devices (tablets, less than 1025) */
 @media only screen and (min-width: 700px) and (max-width: 1024px) and (min-height: 700px){
-    .posts {
-        padding-right: 0;
-    }
 
-    .post {
-        width: 45vw;
-    }
-
-    .date {
-        font-size: 3vw;
-    }
-
-    .title, .topic {
-        font-size: 3.5vw;
-    }
 }

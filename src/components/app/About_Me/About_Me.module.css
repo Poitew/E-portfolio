@@ -16,7 +16,7 @@
 }
 
 .h2 {
-    font-size: 4vw;
+    font-size: 4em;
     float: right;
     color: #0ea5e9;
 }
@@ -39,12 +39,8 @@
     margin: 10% 0 0 5%;
     display: flex;
     flex-direction: column;
-    font-size: 2.5vw;
+    font-size: 2.25em;
     gap: 3vw;
-}
-
-.skillsTitle {
-    font-size: 2.5vw;
 }
 
 .grid {
@@ -90,10 +86,6 @@
     .hr {
         display: none;
     }
-    
-    .h2 {
-        font-size: 10vw;
-    }
 
     .historyContainer {
         align-items: center;
@@ -103,17 +95,13 @@
         width: 95%;
         border-left: 0;
         padding-left: 0;
-        font-size: 4.5vw;
     }
 
     .skillsContainer {
-        width: 80%;
+        width: 90%;
+        font-size: 1.75em;
         margin-left: 0;
         gap: 5vh;
-    }
-
-    .skillsTitle {
-        font-size: 7vw;
     }
 
     .grid {
@@ -137,23 +125,15 @@
         flex-direction: column-reverse;
     }
 
-    .h2 {
-        font-size: 8vw;
-    }
-
     .history {
         width: 90%;
-        font-size: 3vw;
+        font-size: 1.5em;
     }
 
     .skillsContainer {
         width: 80%;
         margin-left: 0;
         gap: 5vh;
-    }
-
-    .skillsTitle {
-        font-size: 5vw;
     }
 
     .grid {
@@ -163,10 +143,6 @@
     }
 
     .skills {
-        width: 8vw;
-    }
-
-    .blogBtn {
-        font-size: 3vw;
+        width: 7vw;
     }
 }

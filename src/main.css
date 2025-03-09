@@ -1,6 +1,6 @@
 /* general decoration*/
 :root {
-    --title_size: 5vw;
+    --title_size: 5em;
     --green: rgba(23, 171, 74, 0.5);
 } 
 
@@ -9,7 +9,6 @@ body {
     font-family: "Inter", sans-serif;
     margin: 0;
     color: rgb(240, 222, 222);
-    cursor: url(/assets/icons/cursor.png), auto;
     min-height: 100vh;
 }
 
@@ -32,22 +31,22 @@ h1 {
 }
 
 h2 {
-    font-size: 1.5vw;
+    font-size: 1.5em;
     margin: 0;
 }
 
 h3 {
-    font-size: 5vw;
+    font-size: 5em;
     margin: 0;
 }
 
 p {
-    font-size: calc(0.1rem + 1vw);
+    font-size: 1.1em;
     margin: 0;
 }
 
 a {
-    font-size: calc(0.1rem + 1vw);
+    font-size: 1.1em;
     color: inherit;
     text-decoration-line: none;
 }
@@ -58,7 +57,7 @@ ul {
 }
 
 li {
-    font-size: calc(0.1rem + 1vw);
+    font-size: 1.1em;
 }
 
 ::-webkit-scrollbar {
@@ -84,5 +83,9 @@ li {
 @media only screen and (max-width: 600px) {
     body, html {
         max-width: 100%;
+    }
+
+    :root {
+        --title_size: 3em
     }
 }

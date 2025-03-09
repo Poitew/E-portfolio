@@ -83,18 +83,22 @@
         align-items: center;
     }
 
+    .project::before {
+        background: rgba(0, 0, 0, 0.75);
+    }
+
     .info {
         align-items: center;
     }
 
     .title {
-        font-size: 15vw;
+        font-size: 3.55em;
     }
 
     .description {
         width: 90%;
-        font-size: 4.25vw;
-        line-height: 2.75;
+        font-size: 1.1em;
+        line-height: 2.5;
     }
 
     .list {
@@ -109,18 +113,26 @@
 
 /* Medium devices (tablets, less than 1025) */
 @media only screen and (min-width: 700px) and (max-width: 1024px) and (min-height: 700px){
+    .project {
+        padding-bottom: 5%;
+    }
+
+    .project::before {
+        background: rgba(0, 0, 0, 0.75);
+    }
+
     .title {
-        font-size: 10vw;
+        font-size: 6emvw;
     }
 
     .description {
         width: 90%;
         line-height: 3;
-        font-size: 3vw;
+        font-size: 1.5em;
     }
 
     .list {
-        font-size: 3.5vw;
+        font-size: 1.5em;
         flex-wrap: wrap;
         justify-content: center;
     }

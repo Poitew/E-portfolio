@@ -2,8 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider, ScrollRestoration } from 'react-router-dom'
 import App from './views/app'
-import Post from './views/post/post'
-import Blog_title from './components/blog/title/Blog_Title'
+import Post from './components/blog/post/post'
 import Posts from './components/blog/posts/posts'
 import './main.css'
 
@@ -23,7 +22,6 @@ const router = createBrowserRouter(
             path: "/posts",
             element: (
                 <>
-                    <Blog_title/>
                     <Posts/>
                     <ScrollRestoration/>
                 </>
