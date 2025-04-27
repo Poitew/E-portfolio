@@ -35,6 +35,7 @@ function Home() {
     }, [text, is_deleting, index]);
 
     return (
+        <>
         <main className={styles.home} id="home">
             <h1 className={styles.presentation}>
                 <span className={styles.span}>Sickpoitew</span>, aspiring <br />
@@ -66,6 +67,8 @@ function Home() {
                 <a className={styles.btnContent} href="#projects-section">Projects</a>
             </div>
         </main>
+        <img className={styles.wave} src="/assets/bottom.svg" alt="Bottom wave" />
+        </>
     );
 }
 

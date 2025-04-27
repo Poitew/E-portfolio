@@ -1,7 +1,7 @@
 .home {
-    min-height: 110vh;
+    min-height: 80vh;
     background-color: #120b1d;
-    padding: 10% 10% 0 8%;
+    padding: 9% 10% 0 8%;
 }
 
 .presentation {
@@ -124,6 +124,12 @@
     filter: blur(60px);
     position: absolute;
     animation: 5s glow infinite ease-in-out;
+}
+
+.wave {
+    width: 100%;
+    position: relative;
+    z-index: -1;
 }
 
 /* X-Small devices (portrait phones, less than 600px) */

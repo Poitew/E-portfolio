@@ -6,9 +6,9 @@
     },
 
     {
-        "src": "/assets/tech/php.svg",
-        "alt": "PHP BackEnd Language",
-        "content": "PHP"
+        "src": "/assets/tech/node.svg",
+        "alt": "Node.js",
+        "content": "Node.js"
     },
 
     {

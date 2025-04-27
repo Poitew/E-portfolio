@@ -26,23 +26,18 @@
         },
 
         {
-            "src":"/assets/tech/vue.svg",
-            "alt":"Vue.JS"
-        },
-
-        {
             "src":"/assets/tech/php.svg",
             "alt":"PHP"
         },
 
         {
-            "src":"/assets/tech/mysql-icon.svg",
-            "alt":"MySql"
+            "src":"/assets/tech/node.svg",
+            "alt":"Node js"
         },
 
         {
-            "src":"/assets/tech/c-plusplus.svg",
-            "alt":"C++"
+            "src":"/assets/tech/mysql-icon.svg",
+            "alt":"MySql"
         }
     ],
 
@@ -72,5 +67,12 @@
             "alt":"Jenkins"
         }
 
+    ],
+
+    "Others":[
+        {
+            "src":"/assets/tech/c-plusplus.svg",
+            "alt":"C++"
+        }
     ]
 }

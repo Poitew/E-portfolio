@@ -2,7 +2,12 @@
 :root {
     --title_size: 4em;
     --green: rgba(23, 171, 74, 0.5);
-} 
+}
+
+* {
+    margin: 0;
+    border: 0;
+}
 
 body {
     background: #0c0719;
@@ -27,33 +32,24 @@ html {
 
 h1 {
     font-size: var(--title_size);
-    margin: 0;
 }
 
 h2 {
     font-size: 1.5em;
-    margin: 0;
 }
 
 h3 {
     font-size: 3em;
-    margin: 0;
 }
 
 p {
     font-size: 0.85em;
-    margin: 0;
 }
 
 a {
     font-size: 0.9em;
     color: inherit;
     text-decoration-line: none;
-}
-
-ul {
-    margin: 0;
-    padding: 0;
 }
 
 li {

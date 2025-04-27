@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import skills from "/src/data/json/skill.json"
+import skills from "/src/data/json/skills.json"
 import styles from './About_Me.module.css'
 
 interface skill_element {
@@ -9,8 +9,9 @@ interface skill_element {
 
 function AboutMe(){
 
-    const SoftwareDev_skills: any[] = skills.SoftwareDev;
-    const DevOps_skills: any[] = skills.DevOps;
+    const software_dev_skills: any[] = skills.SoftwareDev;
+    const devops_skills: any[] = skills.DevOps;
+    const others: any[] = skills.Others;
 
     return(
         <>
@@ -18,12 +19,17 @@ function AboutMe(){
                 <div className={styles.skillsContainer}>
                     <Skills
                         title="Software Development"
-                        skills_arr={SoftwareDev_skills}
+                        skills_arr={software_dev_skills}
                     ></Skills>
 
                     <Skills
                         title="DevOps Engineering"
-                        skills_arr={DevOps_skills}
+                        skills_arr={devops_skills}
+                    ></Skills>
+
+                    <Skills
+                        title="Other Skills"
+                        skills_arr={others}
                     ></Skills>
                 </div>
 
@@ -34,13 +40,12 @@ function AboutMe(){
                 </div>
                     <p className={styles.history}>
                         Hi! I'm "sickpoitew", a 17-year-old student and IT enthusiast based in Italy with 4 years of 
-                        experience in programming. I'm an aspiring Software Developer and DevOps Engineer constantly studying to enhance my
-                        knowledge.
+                        experience in programming. I'm an aspiring Software Developer and DevOps Engineer constanly trying to improve.
                         <br />
                         <br />
                         My expertise in software development is focused on full-stack development, and as such I have a strong
-                        experience with languages and frameworks such as HTML, CSS, JavaScript/TypeScript, ReactJS and VueJS for front-end, as well as
-                        PHP and MySQL for the back-end.
+                        experience with languages and frameworks such as HTML, CSS, JavaScript/TypeScript, ReactJS for front-end, as well as
+                        PHP, Node.js and MySQL for the back-end.
                         I also have a deep interest in a lower level programming, particularly with C++.
                         As a DevOps enthusiast I have experience in using Linux-based operating systems, Bash/Python for automating tasks, 
                         Docker for both containerization and deployment, and Jenkins for CI/CD.

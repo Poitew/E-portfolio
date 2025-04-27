@@ -1,7 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import ReactMarkdown from 'react-markdown';
-import styles from "./post.module.css"
+import styles from "./post.module.css";
 
 function Post() {
     const { n_post }: any = useParams();
@@ -24,16 +24,18 @@ function Post() {
 
     return (
         <main className={styles.post} id="post">
-            <Link className={styles.staticLink} to="/posts">Return to posts</Link>
+            <Link className={styles.link} to="/posts">Return to posts</Link>
             <div className={styles.content} >
                 <ReactMarkdown
                     components={{
-                        h1: ({ node, ...props}) => <h1 className={styles.h1} {...props} />,
-                        h2: ({ node, ...props }) => <h2 className={styles.h2} {...props} />,
-                        h3: ({ node, ...props}) => <h3 className={styles.h3} {...props} />,
-                        p: ({ node, ...props }) => <p className={styles.p} {...props} />,
-                        pre: ({ node, ...props}) => <pre className={styles.pre} {...props} />,
-                        code: ({ node, ...props }) => <code className={styles.code} {...props} />
+                        h1:   ({ node, ...props})     =>     <h1 className={styles.h1} {...props} />,
+                        h2:   ({ node, ...props })    =>     <h2 className={styles.h2} {...props} />,
+                        h3:   ({ node, ...props})     =>     <h3 className={styles.h3} {...props} />,
+                        p:    ({ node, ...props })    =>     <p className={styles.p}   {...props} />,
+                        pre:  ({ node, ...props})     =>     <pre className={styles.pre} {...props} />,
+                        code: ({ node, ...props })    =>     <code className={styles.code} {...props} />,
+                        ul:   ({ node, ...props})     =>     <ul className={styles.ol} {...props} />,
+                        li:   ({ node, ...props })    =>     <li className={styles.li} {...props} />
                     }}
                 >{content}</ReactMarkdown>
             </div>
