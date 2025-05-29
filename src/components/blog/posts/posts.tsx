@@ -8,7 +8,7 @@ function Posts(){
 
     return(
         <>
-            <div className={styles.titleContainer}>
+            <div className={styles.container}>
                 <h1 className={styles.title} >Tech Journal</h1>
                 <Link className={styles.link} to="/">return to home...</Link>
             </div>

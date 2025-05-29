@@ -1,11 +1,12 @@
 /* general decoration*/
 :root {
-    --title_size: 4em;
+    --title_size: 3.5em;
     --green: rgba(23, 171, 74, 0.5);
 }
 
 * {
     margin: 0;
+    padding: 0;
     border: 0;
 }
 
@@ -42,18 +43,10 @@ h3 {
     font-size: 3em;
 }
 
-p {
-    font-size: 0.85em;
-}
-
 a {
     font-size: 0.9em;
     color: inherit;
     text-decoration-line: none;
-}
-
-li {
-    font-size: 1.1em;
 }
 
 ::-webkit-scrollbar {

@@ -1,7 +1,7 @@
 .home {
     min-height: 80vh;
     background-color: #120b1d;
-    padding: 9% 10% 0 8%;
+    padding: 10% 10% 0 8%;
 }
 
 .presentation {
@@ -52,7 +52,7 @@
 }
 
 .description {
-    font-size: 1.1em;
+    font-size: 1em;
     width: 80%;
     color: rgb(148 163 184);
 }
@@ -188,7 +188,28 @@
     }
 
     .btn {
-        width: 20vw;
+        width: 25vw;
+        font-size: 1.25em;
         margin-top: 10%;
+        margin-left: 10%;
+    }
+}
+
+/* 2K */
+@media screen and (min-width: 2560px) and (max-width: 3839px) {
+    .presentation {
+        font-size: 7em;
+    }
+
+    .list {
+        margin: 2.5% 0 4% 0;
+    }
+
+    .li, .description  {
+        font-size: 2em;
+    }
+
+    .btn {
+        font-size: 1.75em;
     }
 }

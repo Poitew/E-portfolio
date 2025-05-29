@@ -50,3 +50,14 @@
         width: 7vw;
     }
 }
+
+/* 2K */
+@media screen and (min-width: 2560px) and (max-width: 3839px) {
+    .sitemap {
+        font-size: 2em;
+    }
+
+    .icon {
+        width: 3vw;
+    }
+}

@@ -1,4 +1,4 @@
-.titleContainer {
+.container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -47,12 +47,33 @@
         gap: 0 1.5vw;
     }
 
-    .titleContainer {
+    .container {
         margin-bottom: 15%;
     }
 }
 
 /* Medium devices (tablets, less than 1025) */
 @media only screen and (min-width: 700px) and (max-width: 1024px) and (min-height: 700px){
+    .posts {
+        width: 90%;
+    }
 
+    .link {
+        font-size: 1.5em;
+    }
+}
+
+/* 2K */
+@media screen and (min-width: 2560px) and (max-width: 3839px) {
+    .title {
+        font-size: 7em;
+    }
+
+    .post_title {
+        font-size: 2.5em;
+    }
+ 
+    .topic, .date, .link {
+        font-size: 2em
+    }
 }

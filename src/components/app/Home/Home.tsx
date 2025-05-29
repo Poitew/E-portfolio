@@ -1,5 +1,6 @@
-import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import styles from "./Home.module.css";
 import icons from "/src/data/json/home-icons.json";
 
@@ -38,11 +39,12 @@ function Home() {
         <>
         <main className={styles.home} id="home">
             <h1 className={styles.presentation}>
-                <span className={styles.span}>Sickpoitew</span>, aspiring <br />
+                <span className={styles.span}>SickPoitew</span> - <br />
                 <span className={styles.typewriter} >{text}<Cursor /></span>
             </h1>
 
             <div className={styles.glow}></div>
+            
             <ul className={styles.list}>
                 {icons_json.map((element: any, index: string) => (
                     <li key={index} className={styles.li}>
@@ -60,11 +62,11 @@ function Home() {
             </p>
 
             <div className={`${styles.btn} ${styles.btn2}`}>
-                <a className={styles.btnContent} href="#about-me-ID">Know More!</a>
+                <Link className={styles.btnContent} to="#about-me-ID">Know More!</Link>
             </div>
 
             <div className={styles.btn}>
-                <a className={styles.btnContent} href="#projects-section">Projects</a>
+                <Link className={styles.btnContent} to="#projects-section">Projects</Link>
             </div>
         </main>
         <img className={styles.wave} src="/assets/bottom.svg" alt="Bottom wave" />

@@ -34,10 +34,10 @@ function AboutMe(){
                 </div>
 
                 <div className={styles.historyContainer}>
-                <div className={styles.title}>
-                    <hr className={styles.hr} />
-                    <h2 className={styles.h2} >About Me & Projects</h2>
-                </div>
+                    <div className={styles.title}>
+                        <hr className={styles.hr} />
+                        <h2 className={styles.h2} >About Me & Projects</h2>
+                    </div>
                     <p className={styles.history}>
                         Hi! I'm "sickpoitew", a 17-year-old student and IT enthusiast based in Italy with 4 years of 
                         experience in programming. I'm an aspiring Software Developer and DevOps Engineer constanly trying to improve.
@@ -52,14 +52,9 @@ function AboutMe(){
                         <br/>
                         <br />
                         In my free time I love studying anything tech-related, reading books and listening to music.
-                        I also have a blog where I write my opinions, thoughts and share tutorials in hope that they will be useful;
-                        link below. 
+                        I also have a blog where I write my opinions, thoughts, and share tutorials in hope that they will be useful.
                     </p>
                 </div>         
-            </div>
-
-            <div className={styles.blogBtnContainer} >
-                <Link to="/posts" className={styles.blogBtn} >Browse posts...</Link>
             </div>
         </>
     );

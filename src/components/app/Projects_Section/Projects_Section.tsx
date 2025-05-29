@@ -31,22 +31,20 @@ interface ProjectsProp {
 
 function Project(props: ProjectsProp){
     return(
-        <div className={styles.project} style={{ backgroundImage: `url(${props.src})`}}>
-            <div className={styles.info}>
-                <h3 className={styles.title}>{props.name}</h3>
-                <p className={styles.description} >{props.desc}</p>
+        <a href={props.github} target="__blank" >
+            <div className={styles.project} style={{ backgroundImage: `url(${props.src})`}}> 
+                <div className={styles.info}>
+                    <h3 className={styles.title}>{props.name}</h3>
+                    <p className={styles.description} >{props.desc}</p>
 
-                <ul className={styles.list} >
-                    {props.tech.map((techItem, index) => (
-                        <li key={index}>{techItem}</li>
-                    ))}
-                </ul>
+                    <ul className={styles.list} >
+                        {props.tech.map((techItem, index) => (
+                            <li key={index}>{techItem}</li>
+                        ))}
+                    </ul>
+                </div>
             </div>
-            
-            <a href={props.github} className={styles.link} target="__blank" >
-                <img src="/assets/tech/github.svg" alt="github repo" />
-            </a>
-        </div>
+        </a>
     );
 }
 
