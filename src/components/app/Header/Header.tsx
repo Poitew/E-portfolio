@@ -86,8 +86,8 @@ function HeaderFunc(){
                 <ul className={styles.list} >
                     <li className={styles.li} ><Link onClick={handleMenu} to="#home">Home</Link></li>
                     <li className={styles.li} ><Link onClick={handleMenu} to="#about-me-ID">About Me</Link></li>
-                    <li className={styles.li} ><Link onClick={handleMenu} to="/posts" >Posts</Link></li>
                     <li className={styles.li} ><Link onClick={handleMenu} to="#projects-section">Projects Section</Link></li>
+                    <li className={styles.li} ><Link onClick={handleMenu} to="/posts" >Posts</Link></li>
                 </ul>
                 
                 <button onClick={handleMenu} className={styles.close}><img className={styles.closeImg} src="assets/icons/x.svg" alt="close Hamburger Menu" /></button>

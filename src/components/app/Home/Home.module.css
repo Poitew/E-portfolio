@@ -1,13 +1,18 @@
 .home {
     min-height: 80vh;
     background-color: #120b1d;
-    padding: 10% 10% 0 8%;
+    padding: 8% 10% 0 8%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .presentation {
     word-spacing: 0.1em;
     color: white;
     letter-spacing: -0.025em;
+    min-width: 40vw;
+    text-align: center;
 }
 
 .typewriter {
@@ -28,18 +33,15 @@
 }
 
 .list {
-    width: fit-content;
     display: flex;
     flex-wrap: wrap;
-    gap: 0 5vw;
-    padding: 0;
-    margin: 2% 0;
+    gap: 0 10vw;
+    margin: 2.5% 0 5% 0;
 }
 
 .li {
     display: flex;
     align-items: center;
-    gap: 1vw;
     transition: transform 0.5s ease-in-out;
 }
 
@@ -55,6 +57,7 @@
     font-size: 1em;
     width: 80%;
     color: rgb(148 163 184);
+    text-align: center;
 }
 
 .spanDesc {
@@ -83,47 +86,6 @@
 
 .btn:hover {
     background-color: #3f2e59;
-}
-
-.btn2 {
-    margin: 5% 5% 0 40%;
-    background-color: #2a2039;
-    box-shadow: 0px 0px 66px 2px rgba(45,255,196,0.47);
-    color: rgb(17, 169, 0);
-    transition: all 1s ease-in-out;
-}
-
-.btn2:hover {
-    box-shadow: 0px 0px 66px 2px rgba(45,255,196,1);
-}
-
-@keyframes glow {
-    0% {
-        transform: scale(0.95);
-        opacity: 0.5;
-    }
-    50% {
-        transform: scale(1);
-        opacity: 1;
-    }
-    100% {
-        transform: scale(0.95);
-        opacity: 0.5;
-    }
-}
-
-.glow {
-    width: 20vw; 
-    height: 20vw;
-    margin-left: 65%;
-    margin-top: -10%;
-    border-radius: 50%;
-    background-color: var(--green); 
-    box-shadow: 0 0 50px var(--green),
-                inset 0 0 50px var(--green); 
-    filter: blur(60px);
-    position: absolute;
-    animation: 5s glow infinite ease-in-out;
 }
 
 .wave {
@@ -166,14 +128,16 @@
 /* Medium devices (tablets, less than 1025) */
 @media only screen and (min-width: 700px) and (max-width: 1024px) and (min-height: 700px){
     .home {
-        padding: 20% 10% 0 5%;
+        padding: 20% 0 0 0;
     }
+
     .presentationContainer {
         margin-top: 15%;
     }
 
     .presentation {
         font-size: 4em;
+        width: 80%;
     }
 
     .list {
@@ -190,8 +154,6 @@
     .btn {
         width: 25vw;
         font-size: 1.25em;
-        margin-top: 10%;
-        margin-left: 10%;
     }
 }
 

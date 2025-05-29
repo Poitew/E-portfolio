@@ -140,6 +140,10 @@
         justify-content: space-around;
     }
 
+    .nav {
+        padding: 0;
+    }
+
     .link {
         display: none;
     }

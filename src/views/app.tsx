@@ -11,7 +11,6 @@ function App(){
             <Home></Home>
             <AboutMe></AboutMe>
             <ProjectsSection></ProjectsSection>
-            <Footer></Footer>
         </>
     );
 }

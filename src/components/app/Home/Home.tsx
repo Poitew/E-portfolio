@@ -42,14 +42,11 @@ function Home() {
                 <span className={styles.span}>SickPoitew</span> - <br />
                 <span className={styles.typewriter} >{text}<Cursor /></span>
             </h1>
-
-            <div className={styles.glow}></div>
             
             <ul className={styles.list}>
                 {icons_json.map((element: any, index: string) => (
                     <li key={index} className={styles.li}>
                         <img className={styles.img} src={element.src} alt={element.alt} />
-                        {element.content}
                     </li>
                 ))}
             </ul>
@@ -57,13 +54,9 @@ function Home() {
             <p className={styles.description}>
                 I enjoy building websites, lower level programming, tasks automation, and in general anything tech-related!<br />
                 <span className={styles.spanDesc}>
-                    In my free time I like to create projects and publish them on my GitHub, I also like to study, read books and write all my thoughts in here. Bye!
+                    In my free time I like to create projects and publish them on my GitHub, I also like read books, and write all my thoughts in here. Bye!
                 </span>
             </p>
-
-            <div className={`${styles.btn} ${styles.btn2}`}>
-                <Link className={styles.btnContent} to="#about-me-ID">Know More!</Link>
-            </div>
 
             <div className={styles.btn}>
                 <Link className={styles.btnContent} to="#projects-section">Projects</Link>
