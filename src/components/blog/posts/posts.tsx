@@ -40,9 +40,9 @@ interface BlogCardProps {
 function BlogCard(props: BlogCardProps){
     return(
         <Link className={styles.post} to={props.to} >
-            <h2 className={styles.post_title} >{props.title}</h2>
-            <p className={styles.topic} >- {props.topic}</p>
-            <p className={styles.date} >{props.date}</p>
+            <h2 className={styles.post_title} >  {props.title}   </h2>
+            <p  className={styles.topic}>        {props.topic}   </p>
+            <p  className={styles.date} >        {props.date}    </p>
         </Link>
     );
 }

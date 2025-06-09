@@ -66,14 +66,18 @@
     padding-top: 2rem;
 }
 
-.btn {
-    width: 13vw;
-    height: 7vh;
-    border: 2px solid #595265;
-    border-radius: 0.5vw;
-    float: left;
-    transition: all 1s ease-in-out;
+.btn_container {
+    display: flex;
+    gap: 2vw;
     margin-top: 5%;
+}
+
+.btn {
+    width: 13.5vw;
+    height: 7.5vh;
+    border: 1px solid #595265;
+    border-radius: 100px;
+    transition: all 1s ease-in-out;
 }
 
 .btnContent {
@@ -101,6 +105,12 @@
         padding: 20% 3% 0 3%;
     }
 
+    .presentation {
+        width: 95vw;
+        min-height: 20vh;
+        white-space: wrap;
+    }
+
     .typewriter {
         display: contents;
     }
@@ -119,8 +129,12 @@
         line-height: 5vh;
     }
 
+    .btn_container {
+        gap: 5vw;
+    }
+
     .btn {
-        width: 25vw;
+        width: 35vw;
         height: 5vh;
         margin-left: 0;
     }

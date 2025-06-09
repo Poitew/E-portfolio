@@ -21,14 +21,6 @@ function HeaderFunc(){
                 if (header.current) {
                     header.current.style.background = websitePosition >= 50 ? "rgba(12, 7, 24, 1)" : "rgba(12, 7, 24, 0)";
                 }
-                if (headerImage.current) {
-                    if(window.innerWidth >= 2560 && window.innerWidth <= 3839){
-                        headerImage.current.style.width = websitePosition >= 50 ? "2em" : "4em";
-                    }
-                    else {
-                        headerImage.current.style.width = websitePosition >= 50 ? "2em" : "4.5em";
-                    }
-                }
             }
         };
       
@@ -58,12 +50,9 @@ function HeaderFunc(){
         {
           (width > 600) ?
             <header ref={header} className={styles.header} >
-                <div className={styles.logo}>
-                    <Link to="#about-me-ID" className={styles.link}>
-                        <img className={styles.img} src="/assets/icons/logo.webp" alt="Code Logo" ref={headerImage} />
-                        SICKPOITEW
-                    </Link>
-                </div>
+                <Link to="#about-me-ID" className={styles.link}>
+                    <img className={styles.img} src="/assets/icons/logo_new.svg" alt="Code Logo" ref={headerImage} />
+                </Link>
 
 	            <nav className={styles.nav} >
 		            <div className={styles.div} style={{color: "#0ea5e9"}}>

@@ -58,8 +58,14 @@ function Home() {
                 </span>
             </p>
 
-            <div className={styles.btn}>
-                <Link className={styles.btnContent} to="#projects-section">Projects</Link>
+            <div className={styles.btn_container}>
+                <div className={styles.btn}>
+                    <Link className={styles.btnContent} to="#projects-section">Projects</Link>
+                </div>
+
+                <div className={styles.btn}>
+                    <Link className={styles.btnContent} to="/posts">Posts</Link>
+                </div>
             </div>
         </main>
         <img className={styles.wave} src="/assets/bottom.svg" alt="Bottom wave" />
