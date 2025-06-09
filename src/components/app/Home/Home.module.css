@@ -11,8 +11,9 @@
     word-spacing: 0.1em;
     color: white;
     letter-spacing: -0.025em;
-    min-width: 40vw;
+    width: 40vw;
     text-align: center;
+    white-space: nowrap;
 }
 
 .typewriter {
@@ -50,7 +51,7 @@
 }
 
 .img {
-    width: 2vw;
+    width: 2.5vw;
 }
 
 .description {

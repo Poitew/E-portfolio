@@ -67,5 +67,10 @@
     {
         "src":"/assets/tech/c-plusplus.svg",
         "alt":"C++"
+    },
+
+    {
+        "src":"/assets/tech/rust.svg",
+        "alt":"Rust"
     }
 ]
