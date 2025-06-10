@@ -51,7 +51,7 @@ function HeaderFunc(){
           (width > 600) ?
             <header ref={header} className={styles.header} >
                 <Link to="#about-me-ID" className={styles.link}>
-                    <img className={styles.img} src="/assets/icons/logo_new.svg" alt="Code Logo" ref={headerImage} />
+                    <img className={styles.img} src="/assets/icons/logo.svg" alt="Code Logo" ref={headerImage} />
                 </Link>
 
 	            <nav className={styles.nav} >
