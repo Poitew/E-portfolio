@@ -12,25 +12,6 @@ function HeaderFunc(){
     const headerImage = useRef<HTMLImageElement | null>(null);
     const width: number = window.innerWidth;
 
-    useEffect(() => {
-        const handleScroll = () => {
-            const websitePosition = window.scrollY;
-
-            // Change the logo size upon scrolling down
-            if (window.innerWidth > 767) {
-                if (header.current) {
-                    header.current.style.background = websitePosition >= 50 ? "rgba(12, 7, 24, 1)" : "rgba(12, 7, 24, 0)";
-                }
-            }
-        };
-      
-        window.addEventListener("scroll", handleScroll);
-      
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-    }, [width]);
-
     function handleMenu() {
         if(header.current){
             if (!open_menu) {
@@ -55,12 +36,12 @@ function HeaderFunc(){
                 </Link>
 
 	            <nav className={styles.nav} >
-		            <div className={styles.div} style={{color: "#0ea5e9"}}>
-                        <Link to="#home">Home</Link>
+		            <div className={styles.div}>
+                        <Link to="#home">home</Link>
                     </div>
                 
                     <div className={styles.div}>
-                        <Link to="/posts">Posts</Link>
+                        <Link to="/posts">posts</Link>
                     </div>
 	            </nav>
               

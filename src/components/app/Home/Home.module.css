@@ -1,10 +1,7 @@
 .home {
     min-height: 80vh;
-    background-color: #120b1d;
-    padding: 8% 10% 0 8%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background: linear-gradient(to top left, #120b1d 0%, #0c0719 100%);
+    padding: 10% 5% 0 5%;
 }
 
 .presentation {
@@ -12,7 +9,7 @@
     color: white;
     letter-spacing: -0.025em;
     width: 40vw;
-    text-align: center;
+    font-size: 7.5em;
     white-space: nowrap;
 }
 
@@ -33,82 +30,17 @@
     color: #0ea5e9;
 }
 
-.list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0 10vw;
-    margin: 2.5% 0 5% 0;
-}
-
-.li {
-    display: flex;
-    align-items: center;
-    transition: transform 0.5s ease-in-out;
-}
-
-.li:hover {
-    transform: scale(1.2);
-}
-
-.img {
-    width: 2.5vw;
-}
-
-.description {
-    font-size: 1em;
-    width: 80%;
-    color: rgb(148 163 184);
-    text-align: center;
-}
-
-.spanDesc {
-    display: block;
-    padding-top: 2rem;
-}
-
-.btn_container {
-    display: flex;
-    gap: 2vw;
-    margin-top: 5%;
-}
-
-.btn {
-    width: 13.5vw;
-    height: 7.5vh;
-    border: 1px solid #595265;
-    border-radius: 100px;
-    transition: all 1s ease-in-out;
-}
-
-.btnContent {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1em;
-}
-
-.btn:hover {
-    background-color: #3f2e59;
-}
-
-.wave {
-    width: 100%;
-    position: relative;
-    z-index: -1;
-}
-
 /* X-Small devices (portrait phones, less than 600px) */
 @media only screen and (max-width: 600px) {
     .home {
-        padding: 20% 3% 0 3%;
+        height: 100vh;
+        padding: 20% 1.5% 0 1.5%;
     }
 
     .presentation {
         width: 95vw;
-        min-height: 20vh;
         white-space: wrap;
+        font-size: 4.5em;
     }
 
     .typewriter {
@@ -118,75 +50,22 @@
     .cursor {
         height: 10vw;
     }
-
-    .list {
-        display: none;
-    }
-
-    .description {
-        width: 100%;
-        margin-top: 10%;
-        line-height: 5vh;
-    }
-
-    .btn_container {
-        gap: 5vw;
-    }
-
-    .btn {
-        width: 35vw;
-        height: 5vh;
-        margin-left: 0;
-    }
 }
 
 /* Medium devices (tablets, less than 1025) */
 @media only screen and (min-width: 700px) and (max-width: 1024px) and (min-height: 700px){
     .home {
-        padding: 20% 0 0 0;
-    }
-
-    .presentationContainer {
-        margin-top: 15%;
+        padding: 20% 0 0 5%;
     }
 
     .presentation {
-        font-size: 4em;
-        width: 80%;
-    }
-
-    .list {
-        display: none;
-    }
-
-    .description {
-        width: 100%;
-        margin-top: 5%;
-        line-height: 4vh;
-        font-size: 1.75em;
-    }
-
-    .btn {
-        width: 25vw;
-        font-size: 1.25em;
+        font-size: 5em;
     }
 }
 
 /* 2K */
 @media screen and (min-width: 2560px) and (max-width: 3839px) {
     .presentation {
-        font-size: 7em;
-    }
-
-    .list {
-        margin: 2.5% 0 4% 0;
-    }
-
-    .li, .description  {
-        font-size: 2em;
-    }
-
-    .btn {
-        font-size: 1.75em;
+        font-size: 15em;
     }
 }
