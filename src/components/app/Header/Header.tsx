@@ -16,10 +16,15 @@ function HeaderFunc(){
         const handleScroll = () => {
             const websitePosition = window.scrollY;
 
-            // Change the logo size upon scrolling down
             if (window.innerWidth > 767) {
                 if (header.current) {
-                    header.current.style.background = websitePosition >= 50 ? "rgba(12, 7, 24, 1)" : "rgba(12, 7, 24, 0)";
+                    if(websitePosition >= 50){
+                        header.current.style.background = "rgba(12, 7, 24, 0.1)";
+                        header.current.style.backdropFilter = "blur(10px)";
+                    }
+                    else {
+                        header.current.style.background = "rgba(12, 7, 24, 0)";
+                    }
                 }
             }
         };
@@ -55,12 +60,12 @@ function HeaderFunc(){
                 </Link>
 
 	            <nav className={styles.nav} >
-		            <div className={styles.div} style={{color: "#0ea5e9"}}>
-                        <Link to="#home">Home</Link>
+		            <div className={styles.div}>
+                        <Link to="#home">home</Link>
                     </div>
                 
                     <div className={styles.div}>
-                        <Link to="/posts">Posts</Link>
+                        <Link to="/posts">posts</Link>
                     </div>
 	            </nav>
               

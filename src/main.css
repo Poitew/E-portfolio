@@ -13,7 +13,7 @@
 body {
     background: #0c0719;
     font-family: "Inter", sans-serif;
-    margin: 0;
+    font-weight: 300;
     color: rgb(240, 222, 222);
     min-height: 100vh;
 }
@@ -33,6 +33,7 @@ html {
 
 h1 {
     font-size: var(--title_size);
+    font-weight: 400;
 }
 
 h2 {

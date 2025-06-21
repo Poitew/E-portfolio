@@ -5,14 +5,14 @@ import styles from "./Home.module.css";
 import icons from "/src/data/json/home-icons.json";
 
 const words = ["Software Developer", "DevOps Engineer"];
-const typing_speed = 175; // Bigger = slower -> rule apply for all the properties below
+const typing_speed = 175;
 const deleting_speed = 75;
 const delay = 2000;
 
 function Home() {
     const icons_json = icons;
-    const [text, set_text] = useState("");  // Text to visualize
-    const [index, set_index] = useState(0); // Index for single char in text
+    const [text, set_text] = useState("");
+    const [index, set_index] = useState(0);
     const [is_deleting, set_is_deleting] = useState(false);
 
     useEffect(() => {
@@ -36,10 +36,9 @@ function Home() {
     }, [text, is_deleting, index]);
 
     return (
-        <>
         <main className={styles.home} id="home">
             <h1 className={styles.presentation}>
-                <span className={styles.span}>SickPoitew</span> - <br />
+                <span className={styles.span}>Sickpoitew</span><br />
                 <span className={styles.typewriter} >{text}<Cursor /></span>
             </h1>
             
@@ -52,10 +51,9 @@ function Home() {
             </ul>
 
             <p className={styles.description}>
-                I enjoy building websites, lower level programming, tasks automation, and in general anything tech-related!<br />
-                <span className={styles.spanDesc}>
-                    In my free time I like to create projects and publish them on my GitHub, I also like read books, and write all my thoughts in here. Bye!
-                </span>
+                I enjoy building websites, lower level programming, tasks automation, and in general anything tech-related!
+                <br/>
+                In my free time I like to create projects and publish them on my GitHub, I also like read books, and write all my thoughts in here. Bye!
             </p>
 
             <div className={styles.btn_container}>
@@ -68,8 +66,6 @@ function Home() {
                 </div>
             </div>
         </main>
-        <img className={styles.wave} src="/assets/bottom.svg" alt="Bottom wave" />
-        </>
     );
 }
 
