@@ -1,7 +1,15 @@
 .home {
     min-height: 100vh;
-    background: linear-gradient(45deg, #120b1d, #0c0719, #2c1e40, #120b1d);
-    background-size: 400% 400%;
+    background: linear-gradient(
+        45deg,
+      #120b1d 0%,
+      #0c0719 25%,
+      #2c1e40 50%,
+      #0c0719 75%,
+      #120b1d 100%
+    );
+    
+    background-size: 200% 200%;
     animation: gradient 15s ease infinite;
     padding: 8% 10% 0 8%;
     display: flex;
@@ -21,10 +29,9 @@
     }
 }
 
-
 .presentation {
     width: 40vw;
-    min-height: 20vh;
+    min-height: 22.5vh;
     word-spacing: 0.1em;
     color: white;
     letter-spacing: -0.025em;
