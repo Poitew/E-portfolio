@@ -1,20 +1,19 @@
 import { Link } from "react-router-dom";
-import styles from "./posts.module.css";
 import posts_json from "/src/data/json/posts.json";
 
 function Posts(){
     const posts: any[] = posts_json;
-    const reversed_posts = [...posts].reverse(); // reverse the posts to put the latest post on top
+    const reversed_posts = [...posts].reverse(); 
 
     return(
         <>
-            <div className={styles.container}>
-                <h1 className={styles.title} >Tech Journal</h1>
-                <Link className={styles.link} to="/">return to home...</Link>
+            <div className="flex flex-col items-center mb-16">
+                <h1 className="text-5xl" >Tech Journal</h1>
+                <Link className="text-sky-400" to="/">return to home...</Link>
             </div>
 
-            <main className={styles.main}>
-                <section className={styles.posts} >
+            <main className="flex justify-center">
+                <section className="min-w-4/5 xl:min-w-3/5 min-h-3/6 p-6 rounded-lg bg-slate-800 flex flex-col gap-y-12" >
                     {reversed_posts.map((element, index) => (
                         <BlogCard
                             title={element.title}
@@ -39,10 +38,10 @@ interface BlogCardProps {
 
 function BlogCard(props: BlogCardProps){
     return(
-        <Link className={styles.post} to={props.to} >
-            <h2 className={styles.post_title} >  {props.title}   </h2>
-            <p  className={styles.topic}>        {props.topic}   </p>
-            <p  className={styles.date} >        {props.date}    </p>
+        <Link className="w-fit gap-y-0.1" to={props.to} >
+            <h2>{props.title}</h2>
+            <p>{props.topic}</p>
+            <p>{props.date}</p>
         </Link>
     );
 }

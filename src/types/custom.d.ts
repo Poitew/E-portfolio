@@ -3,6 +3,11 @@ declare module '*.module.css' {
     export default classes;
 }
 
+declare module "link.ts" {
+    const value: any;
+    export default value;
+}
+
 declare module "*.json" {
     const value: any;
     export default value;

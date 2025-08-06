@@ -23,9 +23,9 @@ function Post() {
     }, [n_post]);
 
     return (
-        <main className={styles.post} id="post">
-            <Link className={styles.link} to="/posts">Return to posts</Link>
-            <div className={styles.content} >
+        <main className="m-5 flex flex-col items-center" id="post">
+            <Link className="text-cyan-300 mb-16" to="/posts">Return to posts</Link>
+            <div className="w-11/12 xl:w-3/5" >
                 <ReactMarkdown
                     components={{
                         h1:   ({ node, ...props})     =>     <h1 className={styles.h1} {...props} />,
@@ -40,7 +40,7 @@ function Post() {
                 >{content}</ReactMarkdown>
             </div>
 
-            <Link className={styles.link} to="/posts">Return to posts</Link> <br/>
+            <Link className="text-cyan-300 mt-16" to="/posts">Return to posts</Link> <br/>
         </main>
     );
 }
