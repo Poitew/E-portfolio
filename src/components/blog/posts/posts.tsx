@@ -38,7 +38,7 @@ interface BlogCardProps {
 
 function BlogCard(props: BlogCardProps){
     return(
-        <Link className="w-fit gap-y-0.1" to={props.to} >
+        <Link className="gap-y-0.1 cursor-pointer border-b-2 pb-1" to={props.to} >
             <h2>{props.title}</h2>
             <p>{props.topic}</p>
             <p>{props.date}</p>

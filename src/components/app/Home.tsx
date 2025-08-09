@@ -63,7 +63,7 @@ function Home() {
             <div className="flex flex-col md:flex-row gap-x-10 gap-y-10 mt-10 pb-16">
                 <Button
                     label="Projects"
-                    route="#projects"
+                    route="#projects-section"
                 />
 
                 <Button
@@ -94,7 +94,7 @@ function Cursor() {
 function Button({label, route}: LinkProps) {
     return(
         <div className="w-48 h-12 rounded-xl bg-gray-900 border-zinc-700 border-1 hover:rotate-2 hover:scale-105 transition-all">
-            <Link className="w-full h-full flex items-center justify-center" to="#projects-section" >Projects</Link>
+            <Link className="w-full h-full flex items-center justify-center" to={route} >{label}</Link>
         </div>
     );
 }
