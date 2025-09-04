@@ -13,6 +13,18 @@
         "github": "https://github.com/Poitew/BareIRC",
         "src": "/assets/projects-img/network.webp"
     },
+    
+    {
+        "name": "GSMP",
+        "description": "🎶 GSMP (Generic and Simple Music Player) is a music player app for android. Its features includes: shuffle mode, skip button, offline listening, auto-play...",
+        "tech": [
+            "TypeScript",
+            "React Native",
+            "Expo"
+        ],
+        "github": "https://github.com/Poitew/GSMP",
+        "src": "/assets/projects-img/music.webp"
+    },
 
     {
         "name": "CineCritics",
@@ -28,19 +40,6 @@
         ],
         "github": "https://github.com/Poitew/CineCritics",
         "src": "/assets/projects-img/cinema.webp"
-    },
-
-    {
-        "name": "Seeker",
-        "description": "A minimal and lightweight TUI-based file explorer, built with C++ and FTXUI, leveraging GNU make and Nix for development.",
-        "tech": [
-            "C++",
-            "FTXUI",
-            "Make",
-            "Nix"
-        ],
-        "github": "https://github.com/Poitew/seeker",
-        "src": "/assets/projects-img/space.webp"
     },
 
     {

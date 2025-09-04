@@ -1,3 +1,4 @@
+import { motion } from "motion/react"
 import data from "/src/data/json/skills.json"
 
 interface skill_element {
@@ -9,13 +10,27 @@ function AboutMe(){
     const skills = data;
 
     return(
-        <div className="flex flex-col xl:flex-row items-baseline gap-x-24 mb-48 mt-10 xl:mt-0" id="about-me-ID" >
+        <motion.div 
+            initial={{ 
+                translateY: 200,
+                opacity: 0,
+            }}
+            whileInView={{
+                translateY: 0,
+                opacity: 1,
+            }}
+            transition={{
+                duration: 1,
+            }}
+            viewport={{ once: true }}
+            className="flex flex-col xl:flex-row items-baseline gap-x-24 mb-48 mt-10 xl:mt-0" id="about-me-ID" >
+                
             <div className="flex w-full flex-col items-center xl:items-start">
                 <h2 className="text-5xl text-center xl:text-left xl:ml-7 text-sky-400">About Me</h2>
 
                 <p className="md:w-8/12 xl:w-xl text-center xl:text-left mt-5 text-sm/7 xl:pl-14 text-slate-400">
-                    Hi! I'm sickpoitew, a 18-year-old student and IT enthusiast based in Italy with 5 years of 
-                    experience in programming. I'm an aspiring Software Developer and DevOps Engineer.
+                    Hi! I'm sickpoitew an IT enthusiast with 5+ years of experience in programming.
+                    I'm an aspiring Software Developer and DevOps Engineer.
                     <br />
                     <br />
                     Since I started programming I've always been interested in full stack development and a sort of lower level programming
@@ -32,7 +47,7 @@ function AboutMe(){
             title="Some of my skills..."
             skills_arr={skills}
             ></Skills>
-        </div>
+        </motion.div>
     );
 }
 

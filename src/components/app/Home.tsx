@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 import { LinkProps } from "../../types/link";
 import icons from "/src/data/json/home-icons.json";
 
-const words = ["Software Developer", "DevOps environment"];
+const words = ["Software Developer", "DevOps Engineer"];
 const typing_speed = 175;
 const deleting_speed = 75;
 const delay = 2000;
@@ -37,40 +37,41 @@ function Home() {
 
 
     return (
-        <main className="min-h-screen background-gradient bg-[length:200%_200%]
-        animate-[gradient_15s_ease_infinite] flex flex-col items-center px-5 xl:px-24 pt-24" id="home">
-            <h1 className="w-full xl:w-3/6 min-h-72 xl:min-h-40 text-5xl/relaxed 
-            text-center text-wrap">
-                <span className="text-sky-400 xl:pr-16">Sickpoitew</span><br />
-                <span className="contents xl:flex items-center" >{text} <Cursor /> </span>
-            </h1>
-            
-            <ul className="flex flex-wrap gap-7 xl:gap-x-32 mt-5 mb-12">
+        <main className="min-h-screen background-gradient bg-[length:200%_200%] 
+        animate-[gradient_15s_ease_infinite] bg-fixed flex items-center justify-center gap-y-16 lg:pt-7 xl:pt-20" id="home">
+            <section className="w-4/6 flex flex-col gap-y-14 lg:gap-y-5 md:pb-28 lg:pb-0" >
+                <h1 className="min-h-48 text-5xl text-center lg:text-left" >
+                    <span className="text-sky-400">sickpoitew</span><br />
+                    <span className="contents xl:flex xl:text-6xl" > {text} <Cursor /> </span>
+                </h1>
+
+                <p className="text-slate-400 lg:w-4/5 pl-3 leading-7 text-center lg:text-left">
+                    I enjoy building websites, lower level programming, tasks automation, and in general anything tech-related!
+                    <br/>
+                    In my free time I like to create projects and publish them on my GitHub. 
+                    I also have a deep passion for reading books. Sometimes I write on my blog, check it out!
+                </p>
+
+                <section className="flex flex-col md:flex-row md:justify-center lg:justify-start items-center gap-x-5 gap-y-10 lg:gap-y-0">
+                    <Button
+                        label="Projects"
+                        route="#projects-section"
+                    />
+
+                    <Button
+                        label="Posts"
+                        route="/posts"
+                    />
+                </section>
+            </section>
+
+            <section className="hidden lg:flex flex-col gap-y-12" >
                 {icons_json.map((element: any, index: string) => (
                     <li key={index} className="flex items-center hover:scale-125 hover:-rotate-12 transition-all duration-200">
-                        <img className="w-9" src={element.src} alt={element.alt} />
+                        <img className="w-10" src={element.src} alt={element.alt} />
                     </li>
                 ))}
-            </ul>
-
-            <p className="w-5/6 text-center leading-9 text-slate-400">
-                I enjoy building websites, lower level programming, tasks automation, and in general anything tech-related!
-                <br/>
-                In my free time I like to create projects and publish them on my GitHub. 
-                I also have a deep passion for reading books. Sometimes I write on my blog, check it out!
-            </p>
-
-            <div className="flex flex-col md:flex-row gap-x-10 gap-y-10 mt-10 pb-16">
-                <Button
-                    label="Projects"
-                    route="#projects-section"
-                />
-
-                <Button
-                    label="Posts"
-                    route="/posts"
-                />
-            </div>
+            </section>
         </main>
     );
 }
@@ -81,7 +82,7 @@ const cursor_variants = {
         transition: {
             duration: 1,
             repeat: Infinity,
-            ease: "linear",
+            ease: "linear" as const,
             times: [0, 0.5, 0.5, 1]
         }
     }
@@ -94,7 +95,9 @@ function Cursor() {
 function Button({label, route}: LinkProps) {
     return(
         <div className="w-48 h-12 rounded-xl bg-gray-900 border-zinc-700 border-1 hover:rotate-2 hover:scale-105 transition-all">
-            <Link className="w-full h-full flex items-center justify-center" to={route} >{label}</Link>
+            <Link className="w-full h-full flex items-center justify-center" to={route} >
+                {label}
+            </Link>
         </div>
     );
 }
