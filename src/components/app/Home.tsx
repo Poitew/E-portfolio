@@ -38,14 +38,14 @@ function Home() {
 
     return (
         <main className="min-h-screen background-gradient bg-[length:200%_200%] 
-        animate-[gradient_15s_ease_infinite] bg-fixed flex items-center justify-center gap-y-16 lg:pt-7 xl:pt-20" id="home">
+        animate-[gradient_15s_ease_infinite] bg-fixed flex items-center justify-center gap-y-16 pt-25 lg:pt-7 xl:pt-20" id="home">
             <section className="w-4/6 flex flex-col gap-y-14 lg:gap-y-5 md:pb-28 lg:pb-0" >
-                <h1 className="min-h-48 text-5xl text-center lg:text-left" >
+                <h1 className="lg:min-h-52 text-5xl text-center md:text-left" >
                     <span className="text-sky-400">sickpoitew</span><br />
-                    <span className="contents xl:flex xl:text-6xl" > {text} <Cursor /> </span>
+                    <span className="hidden md:flex xl:text-6xl" > {text} <Cursor /> </span>
                 </h1>
 
-                <p className="text-slate-400 lg:w-4/5 pl-3 leading-7 text-center lg:text-left">
+                <p className="text-slate-400 lg:w-4/5 pl-3 leading-7 text-center md:text-left">
                     I enjoy building websites, lower level programming, tasks automation, and in general anything tech-related!
                     <br/>
                     In my free time I like to create projects and publish them on my GitHub. 
