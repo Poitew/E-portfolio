@@ -13,18 +13,6 @@
         "github": "https://github.com/Poitew/BareIRC",
         "src": "/assets/projects-img/network.webp"
     },
-    
-    {
-        "name": "GSMP",
-        "description": "🎶 GSMP (Generic and Simple Music Player) is a music player app for android. Its features includes: shuffle mode, skip button, offline listening, auto-play...",
-        "tech": [
-            "TypeScript",
-            "React Native",
-            "Expo"
-        ],
-        "github": "https://github.com/Poitew/GSMP",
-        "src": "/assets/projects-img/music.webp"
-    },
 
     {
         "name": "CineCritics",
