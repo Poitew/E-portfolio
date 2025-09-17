@@ -37,8 +37,8 @@ function Home() {
 
 
     return (
-        <main className="min-h-screen background-gradient bg-[length:200%_200%] 
-        animate-[gradient_15s_ease_infinite] bg-fixed flex items-center justify-center gap-y-16 pt-25 lg:pt-7 xl:pt-20" id="home">
+        <main id="home" className="min-h-screen background-gradient bg-[length:200%_200%] 
+        animate-[gradient_15s_ease_infinite] bg-fixed flex items-center justify-center gap-y-16 pt-25 lg:pt-7 xl:pt-20">
             <section className="w-4/6 flex flex-col gap-y-14 lg:gap-y-5 md:pb-28 lg:pb-0" >
                 <h1 className="lg:min-h-52 text-5xl text-center md:text-left" >
                     <span className="text-sky-400">sickpoitew</span><br />
@@ -66,10 +66,9 @@ function Home() {
             </section>
 
             <section className="hidden lg:flex flex-col gap-y-12" >
-                {icons_json.map((element: any, index: string) => (
-                    <li key={index} className="flex items-center hover:scale-125 hover:-rotate-12 transition-all duration-200">
-                        <img className="w-10" src={element.src} alt={element.alt} />
-                    </li>
+                {icons_json.map((element: any, index: number) => (
+                    <img className="w-10 flex items-center hover:scale-125 hover:-rotate-12 transition-all duration-200" 
+                    src={element.src} alt={element.alt} key={index} />
                 ))}
             </section>
         </main>

@@ -15,6 +15,18 @@
     },
 
     {
+        "name": "Phoenix Player",
+        "description":"🎶 Android Music Player built with React Native and Expo.",
+        "tech": [
+            "TypeScript",
+            "React",
+            "Expo"
+        ],
+        "github": "https://github.com/Poitew/Phoenix-Player",
+        "src": "/assets/projects-img/music.webp"
+    },
+
+    {
         "name": "CineCritics",
         "description": "Full stack CRUD project leveraging React, PHP + JWT and MySQL. CineCritics is an interactive website made for TV shows lovers where you can search, find and review your favourite TV shows. If you change your mind you can always delete or rewrite your review without any worries.",
         "tech": [

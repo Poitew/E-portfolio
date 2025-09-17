@@ -23,8 +23,8 @@ function AboutMe(){
                 duration: 1,
             }}
             viewport={{ once: true }}
-            className="flex flex-col xl:flex-row items-baseline gap-x-24 mb-48 mt-10 xl:mt-0" id="about-me-ID" >
-                
+            className="flex flex-col xl:flex-row items-baseline gap-x-24 mb-56 mt-16 xl:mt-0" id="about-me-ID" 
+        >        
             <div className="flex w-full flex-col items-center xl:items-start">
                 <h2 className="text-5xl text-center xl:text-left xl:ml-7 text-sky-400">About Me</h2>
 
@@ -44,8 +44,8 @@ function AboutMe(){
             </div>
 
             <Skills
-            title="Some of my skills..."
-            skills_arr={skills}
+                title="Some of my skills..."
+                skills_arr={skills}
             ></Skills>
         </motion.div>
     );
