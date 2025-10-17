@@ -1,82 +1,81 @@
 @import "tailwindcss";
 
 @theme {
-    --animate-border-rotate: borderRotate 5s linear infinite;
+	--animate-border-rotate: borderRotate 5s linear infinite;
 
-    @keyframes borderRotate {
-        0% {
-            border-image-source: radial-gradient(circle, #1e304e, #2e4a6a, #4a6e8f, #8aacc9);
-        }
-        25% {
-            border-image-source: radial-gradient(circle, #2e4a6a, #4a6e8f, #8aacc9, #1e304e);
-        }
-        50% {
-            border-image-source: radial-gradient(circle, #4a6e8f, #8aacc9, #1e304e, #2e4a6a);
-        }
-        75% {
-            border-image-source: radial-gradient(circle, #8aacc9, #1e304e, #2e4a6a, #4a6e8f);
-        }
-        100% {
-            border-image-source: radial-gradient(circle, #1e304e, #2e4a6a, #4a6e8f, #8aacc9);
-        }
-    }
+	@keyframes borderRotate {
+		0% {
+			border-image-source: radial-gradient(circle, #1e304e, #2e4a6a, #4a6e8f, #8aacc9);
+		}
+		25% {
+			border-image-source: radial-gradient(circle, #2e4a6a, #4a6e8f, #8aacc9, #1e304e);
+		}
+		50% {
+			border-image-source: radial-gradient(circle, #4a6e8f, #8aacc9, #1e304e, #2e4a6a);
+		}
+		75% {
+			border-image-source: radial-gradient(circle, #8aacc9, #1e304e, #2e4a6a, #4a6e8f);
+		}
+		100% {
+			border-image-source: radial-gradient(circle, #1e304e, #2e4a6a, #4a6e8f, #8aacc9);
+		}
+	}
 }
 
 @layer utilities {
-    .after-transition-left {
-        @apply after:transition-[width,left] after:duration-500 after:ease-in-out;
-    }
+	.after-transition-left {
+		@apply after:transition-[width,left] after:duration-500 after:ease-in-out;
+	}
 
-    .border-image-slice-1 {
-        border-image-slice: 1;
-    }
+	.border-image-slice-1 {
+		border-image-slice: 1;
+	}
 
-    .background-gradient {
-        background-image: linear-gradient(
-            45deg,
-            #120b1d 0%,
-            #0c0719 25%,
-            #2c1e40 50%,
-            #0c0719 75%,
-            #120b1d 100%
-        );
-    }
+	.background-gradient {
+		background-image: linear-gradient(
+			45deg,
+			#120b1d 0%,
+			#0c0719 25%,
+			#2c1e40 50%,
+			#0c0719 75%,
+			#120b1d 100%
+		);
+	}
 
-    @keyframes gradient {
-        0% {
-            background-position: 15% 50%;
-        }
-        35% {
-            background-position: 75% 50%;
-        }
-        100% {
-            background-position: 15% 50%;
-        }
-    }
+	@keyframes gradient {
+		0% {
+			background-position: 15% 50%;
+		}
+		35% {
+			background-position: 75% 50%;
+		}
+		100% {
+			background-position: 15% 50%;
+		}
+	}
 }
-
 
 /* general decoration*/
 :root {
-    --title_size: 3.5em;
-    --green: rgba(23, 171, 74, 0.5);
+	--title_size: 3.5em;
+	--green: rgba(23, 171, 74, 0.5);
 }
 
 ::-webkit-scrollbar {
-    width: 20px;
+	width: 20px;
 }
-  
+
 ::-webkit-scrollbar-track {
-    background-color: transparent;
+	background-color: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #d6dee1;
-    border-radius: 20px;
-    border: 6px solid transparent;
-    background-clip: content-box;
+	background-color: #d6dee1;
+	border-radius: 20px;
+	border: 6px solid transparent;
+	background-clip: content-box;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #a8bbbf;
+	background-color: #a8bbbf;
 }

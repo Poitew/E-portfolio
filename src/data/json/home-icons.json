@@ -1,26 +1,26 @@
 [
-    {
-        "src": "/assets/tech/react.svg",
-        "alt": "React.JS Framework"
-    },
+	{
+		"src": "/assets/tech/react.svg",
+		"alt": "React.JS Framework"
+	},
 
-    {
-        "src": "/assets/tech/node.svg",
-        "alt": "Node.js"
-    },
+	{
+		"src": "/assets/tech/node.svg",
+		"alt": "Node.js"
+	},
 
-    {
-        "src": "/assets/tech/docker-icon.svg",
-        "alt": "Docker Technology"
-    },
-    
-    {
-        "src": "/assets/tech/rust.svg",
-        "alt": "Rust Language"
-    },
+	{
+		"src": "/assets/tech/docker-icon.svg",
+		"alt": "Docker Technology"
+	},
 
-    {
-        "src": "/assets/tech/git-icon.svg",
-        "alt": "Git Version Control System"
-    }
+	{
+		"src": "/assets/tech/rust.svg",
+		"alt": "Rust Language"
+	},
+
+	{
+		"src": "/assets/tech/git-icon.svg",
+		"alt": "Git Version Control System"
+	}
 ]

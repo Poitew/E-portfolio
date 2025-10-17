@@ -1,22 +1,22 @@
 [
-    {
-        "title": "Colophon",
-        "date": "10/11/2024",
-        "topic": "self",
-        "to": "/posts/001"
-    },
+	{
+		"title": "Colophon",
+		"date": "10/11/2024",
+		"topic": "self",
+		"to": "/posts/001"
+	},
 
-    {
-        "title": "Compilers",
-        "date": "05/01/2025",
-        "topic": "compilers",
-        "to": "/posts/002"
-    },
+	{
+		"title": "Compilers",
+		"date": "05/01/2025",
+		"topic": "compilers",
+		"to": "/posts/002"
+	},
 
-    {
-        "title": "Your first interpreter",
-        "date": "27/04/2025",
-        "topic": "compilers",
-        "to": "/posts/003"
-    }
+	{
+		"title": "Your first interpreter",
+		"date": "27/04/2025",
+		"topic": "compilers",
+		"to": "/posts/003"
+	}
 ]
