@@ -1,116 +1,65 @@
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { motion } from "motion/react";
-import { LinkProps } from "../../types/link";
-import icons from "/src/data/json/home-icons.json";
-
-const words = ["Software Developer", "DevOps Engineer"];
-const typing_speed = 175;
-const deleting_speed = 75;
-const delay = 2000;
+import { useEffect, useRef } from "react";
 
 function Home() {
-	const icons_json = icons;
-	const [text, set_text] = useState("");
-	const [index, set_index] = useState(0);
-	const [is_deleting, set_is_deleting] = useState(false);
+	const main_ref = useRef<HTMLDivElement>(null);
 
 	useEffect(() => {
-		const current_word = words[index];
+		const is_desktop = window.innerWidth > 1024;
 
-		if (!is_deleting && text === current_word) {
-			setTimeout(() => set_is_deleting(true), delay);
-		} else if (is_deleting && text === "") {
-			set_is_deleting(false);
-			set_index((prev) => (prev + 1) % words.length);
-		}
+		if (!is_desktop) return;
 
-		const timeout = setTimeout(
-			() => {
-				set_text((prev_text) =>
-					is_deleting
-						? prev_text.slice(0, -1)
-						: current_word.slice(0, prev_text.length + 1),
-				);
-			},
-			is_deleting ? deleting_speed : typing_speed,
-		);
+		let x = 0;
+		let y = 0;
 
-		return () => clearTimeout(timeout);
-	}, [text, is_deleting, index]);
+		let target_x = 0;
+		let target_y = 0;
+
+		const friction = 0.25;
+
+		const on_move = (e: MouseEvent) => {
+			const { innerWidth, innerHeight } = window;
+
+			const dx = (e.clientX / innerWidth) * 2 - 1;
+			const dy = (e.clientY / innerHeight) * 2 - 1;
+
+			target_x = dx * 10;
+			target_y = dy * 10;
+		};
+
+		const animate = () => {
+			x += (target_x - x) * friction;
+			y += (target_y - y) * friction;
+
+			if (main_ref.current) {
+				main_ref.current.style.transform = `translate(${x}px, ${y}px) scale(1.1)`;
+			}
+
+			requestAnimationFrame(animate);
+		};
+
+		window.addEventListener("mousemove", on_move);
+		animate();
+
+		return () => window.removeEventListener("mousemove", on_move);
+	}, []);
 
 	return (
 		<main
 			id="home"
+			ref={main_ref}
 			className="min-h-screen background-gradient bg-[length:200%_200%] 
-        animate-[gradient_15s_ease_infinite] bg-fixed flex items-center justify-center gap-y-16 pt-25 lg:pt-7 xl:pt-20"
+        	animate-[gradient_15s_ease_infinite] bg-fixed flex flex-col items-center justify-center"
 		>
-			<section className="w-4/6 flex flex-col gap-y-14 lg:gap-y-5 md:pb-28 lg:pb-0">
-				<h1 className="lg:min-h-52 text-5xl text-center md:text-left">
-					<span className="text-sky-400">sickpoitew</span>
-					<br />
-					<span className="hidden md:flex xl:text-6xl">
-						{" "}
-						{text} <Cursor />{" "}
-					</span>
-				</h1>
+			<div className="grid-overlay"></div>
 
-				<p className="text-slate-400 lg:w-4/5 pl-3 leading-7 text-center md:text-left">
-					In my free time I build software, both in the web development field and with
-					lower level langauges. <br />I also like reading, and occasionally publish
-					software on my github.
-				</p>
-
-				<section className="flex flex-col md:flex-row md:justify-center lg:justify-start items-center gap-x-5 gap-y-10 lg:gap-y-0">
-					<Button label="Projects" route="#projects-section" />
-
-					<Button label="Posts" route="/posts" />
-				</section>
-			</section>
-
-			<section className="hidden lg:flex flex-col gap-y-12">
-				{icons_json.map((element: any, index: number) => (
-					<img
-						className="w-10 flex items-center hover:scale-125 hover:-rotate-12 transition-all duration-200"
-						src={element.src}
-						alt={element.alt}
-						key={index}
-					/>
-				))}
-			</section>
+			<h1 className="text-5xl lg:text-9xl font-bold mb-5">SICKPOITEW</h1>
+			<p className="w-3/4 text-center text-slate-400">
+				{/* Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio laborum ducimus quas
+				repellat officiis neque amet quod iusto enim, consectetur molestias eaque corporis,
+				modi omnis corrupti laudantium. Necessitatibus, eum quo! */}
+				Software Developer and DevOps Expert skilled in developing and maintaining software.
+			</p>
 		</main>
-	);
-}
-
-const cursor_variants = {
-	blinking: {
-		opacity: [0, 0, 1, 1],
-		transition: {
-			duration: 1,
-			repeat: Infinity,
-			ease: "linear" as const,
-			times: [0, 0.5, 0.5, 1],
-		},
-	},
-};
-
-function Cursor() {
-	return (
-		<motion.div
-			variants={cursor_variants}
-			animate="blinking"
-			className="w-0.5 h-14 inline-block bg-white ml-7"
-		/>
-	);
-}
-
-function Button({ label, route }: LinkProps) {
-	return (
-		<div className="w-48 h-12 rounded-xl bg-gray-900 border-zinc-700 border-1 hover:rotate-2 hover:scale-105 transition-all">
-			<Link className="w-full h-full flex items-center justify-center" to={route}>
-				{label}
-			</Link>
-		</div>
 	);
 }
 

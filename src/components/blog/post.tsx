@@ -6,7 +6,6 @@ import styles from "./post.module.css";
 function Post() {
 	const { n_post }: any = useParams();
 	const [content, setContent] = useState<string>("");
-	// Get all the posts from /src/data/posts/ and save them in a record: key (path) -> value (content)
 	const posts = import.meta.glob("/src/data/posts/*.md", {
 		eager: true,
 		query: "?raw",
@@ -14,10 +13,8 @@ function Post() {
 	}) as Record<string, string>;
 
 	useEffect(() => {
-		// Create path to post based on the url
 		const postKey = `/src/data/posts/${n_post}.md`;
 
-		// If the new path is a correct key, we save it's content into content state
 		if (posts[postKey]) {
 			setContent(posts[postKey]);
 		} else {

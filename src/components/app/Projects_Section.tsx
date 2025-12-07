@@ -4,7 +4,7 @@ function ProjectsSection() {
 	const projects_info: any[] = projects;
 
 	return (
-		<div className="flex flex-col gap-y-7 relative h-400vh z-10" id="projects-section">
+		<div className="relative flex flex-col gap-y-7" id="projects-section">
 			{projects_info.map((element, index) => (
 				<Project
 					key={index}

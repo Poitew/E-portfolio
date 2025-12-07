@@ -2,8 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider, ScrollRestoration } from "react-router-dom";
 import App from "./views/app";
-import Post from "./components/blog/post/post";
-import Posts from "./components/blog/posts/posts";
+import Post from "./components/blog/post";
+import Posts from "./components/blog/posts";
 import "./main.css";
 
 const router = createBrowserRouter([
