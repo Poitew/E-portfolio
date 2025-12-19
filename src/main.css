@@ -73,11 +73,6 @@
 }
 
 /* general decoration*/
-:root {
-	--title_size: 3.5em;
-	--green: rgba(23, 171, 74, 0.5);
-}
-
 ::-webkit-scrollbar {
 	width: 20px;
 }

@@ -1,52 +1,62 @@
 import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import data from "/src/data/json/skills.json";
-
-interface skill_element {
-	src: string;
-	alt: string;
-}
+import Carousel from "./Carousel";
+import projects from "../../data/json/projects.json";
 
 function AboutMe() {
 	const main_section = useRef<HTMLDivElement>(null);
+
 	const section_one = useRef<HTMLDivElement>(null);
 	const section_two = useRef<HTMLDivElement>(null);
 
-	const skills = data;
+	const carousel_one = useRef<HTMLDivElement | null>(null);
+	const carousel_two = useRef<HTMLDivElement | null>(null);
 
 	useGSAP(
 		() => {
 			const container = main_section.current;
 			const a = section_one.current;
 			const b = section_two.current;
-			if (!container || !a || !b) return;
+
+			const a1 = carousel_one.current;
+			const a2 = carousel_two.current;
+
+			if (!container || !a || !b || !a1 || !a2) return;
+
+			const scroll_offset = a1.scrollWidth - a1.clientWidth;
+			const scroll_multiplier = window.innerWidth < 480 ? 3 : 1.75;
 
 			const tl = gsap.timeline({
 				scrollTrigger: {
 					trigger: container,
 					start: "top top",
-					end: `+=500%`,
+					end: `+=${scroll_offset * scroll_multiplier}`,
 					scrub: true,
 					pin: true,
+					invalidateOnRefresh: true,
 				},
 			});
 
+			// s1 in
 			tl.fromTo(
 				a,
 				{ y: "10%", opacity: 0 },
 				{ y: "0%", opacity: 1, duration: 0.5, ease: "power1.out" },
 			);
 
+			tl.to(a1, { x: -scroll_offset }, ">");
+
+			// s2 in
 			tl.fromTo(
 				b,
 				{ scale: 0.1, opacity: 0, transformOrigin: "50% 50%" },
-				{ scale: 1, opacity: 1, duration: 1, ease: "power1.out" },
+				{ scale: 1, opacity: 1, duration: 0.75, ease: "power1.out" },
 			);
 
-			tl.to(a, { scale: 7.5, opacity: 0, duration: 0.65, ease: "power1.inOut" }, "<");
+			// s1 out
+			tl.to(a, { scale: 7.5, opacity: 0, duration: 0.25, ease: "power1.inOut" }, "<");
 			tl.to(a, { display: "none" });
-			tl.to(b, { translateY: -150, opacity: 0, duration: 1, ease: "power1.inOut" });
 
 			return () => {
 				tl.revert();
@@ -66,15 +76,17 @@ function AboutMe() {
 			<Section
 				title="SOFTWARE DEVELOPMENT"
 				description="Development focused on performance, and elegant solutions."
-				skills={skills.sd}
+				projects={projects.sd}
 				innerRef={section_one}
+				carousel_ref={carousel_one}
 			/>
 
 			<Section
 				title="DEVOPS"
 				description="Stability, efficiency, and automation, all at once."
-				skills={skills.devops}
+				projects={projects.devops}
 				innerRef={section_two}
+				carousel_ref={carousel_two}
 			/>
 		</div>
 	);
@@ -83,34 +95,24 @@ function AboutMe() {
 interface SectionProps {
 	title: string;
 	description: string;
-	skills: skill_element[];
+	projects: any[];
 	innerRef: React.RefObject<HTMLDivElement | null>;
+	carousel_ref: React.RefObject<HTMLDivElement | null>;
 }
 
-function Section({ title, description, skills, innerRef }: SectionProps) {
+function Section({ title, description, innerRef, projects, carousel_ref }: SectionProps) {
 	return (
 		<div
 			ref={innerRef}
-			className="absolute h-screen w-screen py-10 px-5 flex flex-col justify-between"
+			className="absolute h-screen w-screen py-7 px-5 flex flex-col lg:items-center gap-y-5"
 		>
 			<div>
-				<h1 className="text-4xl lg:text-9xl text-center lg:text-left">{title}</h1>
-				<p className="text-center lg:text-left">{description}</p>
+				<h2 className="text-4xl lg:text-6xl text-center">{title}</h2>
+				<p className="text-center">{description}</p>
+				<h3 className="text-center">What I worked on...</h3>
 			</div>
 
-			<div className="lg:flex lg:justify-end">
-				<div className="grid grid-cols-4 gap-10 lg:gap-20">
-					{skills.map((element: skill_element, index: number) => (
-						<img
-							key={index}
-							src={element.src}
-							alt={element.alt}
-							loading="lazy"
-							className="w-11 m-auto transition-all duration-500 hover:scale-150"
-						></img>
-					))}
-				</div>
-			</div>
+			<Carousel projects={projects} carousel_ref={carousel_ref} />
 		</div>
 	);
 }

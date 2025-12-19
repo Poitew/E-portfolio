@@ -1,33 +1,37 @@
-[
-	{
-		"name": "BareIRC",
-		"description": "🌐 Terminal IRC Client written in Rust.",
-		"tech": ["Rust", "Cursive TUI", "Nix"],
-		"github": "https://github.com/Poitew/BareIRC",
-		"src": "/assets/projects-img/network.webp"
-	},
+{
+	"sd": [
+		{
+			"name": "SceneComposer",
+			"desc": "Lightweight scene composer and renderer.",
+			"tech": ["C++", "OpenGL", "ASSIMP", "Dear ImGUi", "Nix"],
+			"github": "https://github.com/Poitew/SceneComposer",
+			"src": "/assets/projects-img/composition.webp"
+		},
 
-	{
-		"name": "Phoenix Player",
-		"description": "🎶 Android Music Player built with React Native and Expo.",
-		"tech": ["TypeScript", "React", "Expo"],
-		"github": "https://github.com/Poitew/Phoenix-Player",
-		"src": "/assets/projects-img/music.webp"
-	},
+		{
+			"name": "BareIRC",
+			"desc": "🌐 Terminal IRC Client written in Rust.",
+			"tech": ["Rust", "Cursive TUI", "Nix"],
+			"github": "https://github.com/Poitew/BareIRC",
+			"src": "/assets/projects-img/network.webp"
+		},
 
-	{
-		"name": "CineCritics",
-		"description": "Website made for TV shows lovers where you can search and review your favourite TV shows.",
-		"tech": ["CSS Modules", "React", "React Router", "PHP", "JWT", "MySQL", "API"],
-		"github": "https://github.com/Poitew/CineCritics",
-		"src": "/assets/projects-img/cinema.webp"
-	},
+		{
+			"name": "Phoenix Player",
+			"desc": "🎶 Android Music Player built with React Native and Expo.",
+			"tech": ["TypeScript", "React", "Expo"],
+			"github": "https://github.com/Poitew/Phoenix-Player",
+			"src": "/assets/projects-img/music.webp"
+		}
+	],
 
-	{
-		"name": "To-Do-Son",
-		"description": "To-Do app written in Python that transcribes all your tasks in JSON format. It uses the JSON library for cleaner and overall better code; the terminal is customized using the art library. The project is provided with a Jenkins + Groovy pipeline to automate the building, testing, and Docker image-building phases of the project.",
-		"tech": ["Python", "Jenkins - Groovy", "Docker"],
-		"github": "https://github.com/Poitew/To-Do-Son",
-		"src": "/assets/projects-img/books.webp"
-	}
-]
+	"devops": [
+		{
+			"name": "To-Do-Son",
+			"desc": "To-Do app written in Python that transcribes all your tasks in JSON format. It uses the JSON library for cleaner and overall better code; the terminal is customized using the art library. The project is provided with a Jenkins + Groovy pipeline to automate the building, testing, and Docker image-building phases of the project.",
+			"tech": ["Python", "Jenkins - Groovy", "Docker"],
+			"github": "https://github.com/Poitew/To-Do-Son",
+			"src": "/assets/projects-img/books.webp"
+		}
+	]
+}
