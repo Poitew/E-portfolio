@@ -5,8 +5,8 @@ interface CarouselProps {
 
 function Carousel({ projects, carousel_ref }: CarouselProps) {
 	return (
-		<section className="h-full">
-			<div ref={carousel_ref} className="flex gap-10 h-full">
+		<section className="h-full relative overflow-x-hidden">
+			<div ref={carousel_ref} className="flex gap-10 h-full overflow-x-visible">
 				{projects.map((item, index) => (
 					<Project key={index} {...item} />
 				))}

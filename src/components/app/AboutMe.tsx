@@ -25,13 +25,12 @@ function AboutMe() {
 			if (!container || !a || !b || !a1 || !a2) return;
 
 			const scroll_offset = a1.scrollWidth - a1.clientWidth;
-			const scroll_multiplier = window.innerWidth < 480 ? 3 : 1.75;
 
 			const tl = gsap.timeline({
 				scrollTrigger: {
 					trigger: container,
 					start: "top top",
-					end: `+=${scroll_offset * scroll_multiplier}`,
+					end: `+=${window.innerWidth > 1024 ? scroll_offset * 1.75 : "500%"}`,
 					scrub: true,
 					pin: true,
 					invalidateOnRefresh: true,
