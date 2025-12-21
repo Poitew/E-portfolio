@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 220" width="50" height="120">
+  <g transform="translate(21,0)">
+    <path stroke="#0ff" stroke-width="4" d="M5 10v110"/>
+    <path stroke="#0ff" stroke-width="2" d="M15 10v190"/>
+    <text x="35" y="30" fill="#0ff" font-size="24" font-family="monospace" letter-spacing="4" writing-mode="tb">
+      SCROLL
+    </text>
+    <path fill="#0ff" stroke="#0ff" d="M25 195h20l-10 20z"/>
+  </g>
+</svg>

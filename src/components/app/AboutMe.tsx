@@ -44,6 +44,7 @@ function AboutMe() {
 				{ y: "0%", opacity: 1, duration: 0.5, ease: "power1.out" },
 			);
 
+			// s1 carousel
 			tl.to(a1, { x: -scroll_offset }, ">");
 
 			// s2 in
@@ -69,7 +70,7 @@ function AboutMe() {
 	return (
 		<div
 			ref={main_section}
-			className="bg-[#0c0719] flex flex-col items-baseline gap-x-24 mb-56 mt-16 xl:mt-0"
+			className="bg-[#0c0719] flex flex-col items-baseline gap-x-24 mb-56 mt-16 xl:mt-0 z-20"
 			id="about-me-ID"
 		>
 			<Section

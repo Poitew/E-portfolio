@@ -8,7 +8,7 @@ interface LinkProps {
 function Header() {
 	return (
 		<header
-			className="w-screen h-20 absolute z-10 text-xl 
+			className="w-screen h-20 absolute z-20 text-xl 
             font-semibold flex items-center justify-center
             transition-colors duration-300 ease-in-out"
 		>

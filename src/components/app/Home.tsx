@@ -47,12 +47,12 @@ function Home() {
 		<main
 			id="home"
 			ref={main_ref}
-			className="min-h-screen background-gradient bg-[length:200%_200%] 
+			className="min-h-screen background-gradient bg-[length:200%_200%]
         	animate-[gradient_15s_ease_infinite] bg-fixed flex flex-col items-center justify-center"
 		>
 			<div className="grid-overlay"></div>
 
-			<h1 className="text-5xl lg:text-9xl font-bold mb-5">SICKPOITEW</h1>
+			<h1 className="text-4xl md:text-7xl lg:text-9xl font-bold mb-5">SICKPOITEW</h1>
 			<p className="w-3/4 text-center text-slate-400">
 				{/* Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio laborum ducimus quas
 				repellat officiis neque amet quod iusto enim, consectetur molestias eaque corporis,
