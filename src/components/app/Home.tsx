@@ -54,9 +54,6 @@ function Home() {
 
 			<h1 className="text-4xl md:text-7xl lg:text-9xl font-bold mb-5">SICKPOITEW</h1>
 			<p className="w-3/4 text-center text-slate-400">
-				{/* Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio laborum ducimus quas
-				repellat officiis neque amet quod iusto enim, consectetur molestias eaque corporis,
-				modi omnis corrupti laudantium. Necessitatibus, eum quo! */}
 				Software Developer and DevOps Expert skilled in developing and maintaining software.
 			</p>
 		</main>

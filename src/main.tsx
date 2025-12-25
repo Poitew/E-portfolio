@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider, ScrollRestoration } from "react-router-dom";
-import App from "./views/app";
+import App from "./components/app/App";
 import Post from "./components/blog/post";
 import Posts from "./components/blog/posts";
 import "./main.css";

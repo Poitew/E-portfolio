@@ -72,6 +72,11 @@
 	}
 }
 
+@font-face {
+	font-family: Futura;
+	src: url(assets/FuturaCyrillicLight.ttf);
+}
+
 /* general decoration*/
 ::-webkit-scrollbar {
 	width: 20px;
